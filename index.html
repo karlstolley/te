@@ -24,16 +24,68 @@
     line-height: 48px;
     font-size: 36px;
   }
+  ul li {
+    list-style-type: square;
+    margin-left: 36px;
+  }
   /*h2,h3 {
     line-height: 36px;
     font-size: 26px;
   }*/
+  h2 { margin-bottom: 12px; }
   b { font-weight: bold; }
+  a { text-decoration: none; }
   p,ul {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
   div#content, footer {
     margin-top: 36px;
+  }
+  /* Colors - Stolen from http://www.colourlovers.com/palette/2748243/*** */
+  html {
+    background: rgb(218,242,238);
+    color: rgb(190,97,57); /*Deep brown*/
+  }
+  header,footer {
+    color: rgb(222,147,67); /*Orange*/
+  }
+  header a, footer a {
+    color: rgb(190,97,57); /*Deep brown*/
+  }
+  a {
+    color: rgb(159,192,207); /*blue*/
+    color: rgb(190,97,57); /*Deep brown*/
+    color: rgb(158,47,47); /*Rust red*/
+    color: rgb(222,147,67); /*Orange*/
+    color: rgb(82,137,163); /*blue*/
+  }
+  h1 {
+    color: rgb(158,47,47); /*Rust red*/
+  }
+  /* Modules */
+  header,footer {
+    margin: 12px;
+  }
+  header h1 { width: 60%; }
+  .pitch {
+    line-height: 36px;
+    margin: 0px 12px;
+  }
+  .details {
+    background: rgb(190,97,57); /*Deep brown*/
+    color: rgb(218,242,238);
+    padding: 24px 12px 0px 12px;
+    margin-bottom: 24px;
+  }
+  .details h1 {
+    color: rgb(218,242,238);
+    padding-bottom: 12px;
+  }
+  .details a {
+    color: rgb(222,147,67); /*Orange*/
+  }
+  .previews {
+    margin: 0px 12px;
   }
   </style>
   <script type="text/javascript" src="//use.typekit.net/atr4yym.js"></script>
@@ -49,6 +101,7 @@
 </header>
 
 <div id="content">
+<div class="pitch">
 <p>
   <b>What do the Chicago Transit Authority, <i>The New York Times</i>, Instagram, Twitter, Facebook,
   and fans of the band Phish have in common?</b> Each offers data APIs that provide some level of
@@ -63,6 +116,9 @@
   API's terms of service. And if you have or are looking to build a data set to share openly with
   the rest of the world through your own API, you'll learn how to do that, too.
 </p>
+</div>
+<div class="details">
+<h1>Wait, API what...?</h1>
 <p>
   The Application Programming Interface (API) is a broad concept for making software tools and data
   accessible to do exactly those things. The focus of this course will be web-based data APIs, but
@@ -78,6 +134,8 @@
   that makes up the last third of the course will focus on the creation of data APIs in JSON, and
   writing documentation to simplify access for others.
 </p>
+</div>
+<div class="previews">
 <h2>Some Course Goals</h2>
 <ul>
   <li>Locating open data APIs and gaining access to restricted APIs</li>
@@ -92,6 +150,7 @@
   <li>David Copeland, <i>Building Awesome Command-Line Applications with Ruby</i></li>
   <li>Marijn Haverbeke, <i>Eloquent JavaScript</i></li>
 </ul>
+</div>
 </div>
 <footer>
   <p>

@@ -38,6 +38,9 @@
   p,ul {
     padding-bottom: 24px;
   }
+  li {
+    margin-bottom: 12px;
+  }
   div#content, footer {
     margin-top: 36px;
   }
@@ -86,6 +89,44 @@
   }
   .previews {
     margin: 0px 12px;
+    color: #777;
+  }
+  @media screen and (min-width: 400px) {
+    header,footer,.pitch,.previews {
+      margin: 0 5%;
+    }
+    .details {
+      padding: 0 5%;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    header,footer,.pitch,.previews {
+      margin: 24px 25% 0px 15%;
+    }
+    header { margin-right: 0; }
+    .details {
+      padding: 24px 20% 0px 10%;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    header h1 { width: 20%; }
+  }
+  @media screen and (min-width: 1000px) {
+    #content {
+      position: relative;
+    }
+    .pitch,.previews,header,footer {
+      margin-left: 10%;
+      width: 50%;
+    }
+    header,header h1 { width: auto; }
+   .details {
+      position: absolute;
+      width: 25%;
+      left: 65%;
+      top: 0px;
+      padding: 24px 2.5%;
+   }
   }
   </style>
   <script type="text/javascript" src="//use.typekit.net/atr4yym.js"></script>

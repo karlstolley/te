@@ -2,212 +2,855 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>COM580: Application Programming Interfaces</title>
+  <title>COM381/580: Application Programming Interfaces</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.9.0/build/cssreset/cssreset-min.css">
-  <style type="text/css" media="screen">
-  html {
-    font-family: "adelle",serif;
-    font-size: 18px;
-    line-height: 24px;
-  }
-  header, footer {
-    font-family: "adelle-sans",sans-serif;
-    font-size: 14px;
-  }
-  h1,h2,h3 {
-    font-family: "adelle-sans",sans-serif;
-    font-weight: bold;
-  }
-  h1 {
-    line-height: 48px;
-    font-size: 36px;
-  }
-  ul li {
-    list-style-type: square;
-    margin-left: 36px;
-  }
-  /*h2,h3 {
-    line-height: 36px;
-    font-size: 26px;
-  }*/
-  h2 { margin-bottom: 12px; }
-  b { font-weight: bold; }
-  a { text-decoration: none; }
-  p,ul {
-    padding-bottom: 24px;
-  }
-  li {
-    margin-bottom: 12px;
-  }
-  div#content, footer {
-    margin-top: 36px;
-  }
-  /* Colors - Stolen from http://www.colourlovers.com/palette/2748243/*** */
-  html {
-    background: rgb(218,242,238);
-    color: rgb(190,97,57); /*Deep brown*/
-  }
-  header,footer {
-    color: rgb(222,147,67); /*Orange*/
-  }
-  header a, footer a {
-    color: rgb(190,97,57); /*Deep brown*/
-  }
-  a {
-    color: rgb(159,192,207); /*blue*/
-    color: rgb(190,97,57); /*Deep brown*/
-    color: rgb(158,47,47); /*Rust red*/
-    color: rgb(222,147,67); /*Orange*/
-    color: rgb(82,137,163); /*blue*/
-  }
-  h1 {
-    color: rgb(158,47,47); /*Rust red*/
-  }
-  /* Modules */
-  header,footer {
-    margin: 12px;
-  }
-  header h1 { width: 60%; }
-  .pitch {
-    line-height: 36px;
-    margin: 0px 12px;
-  }
-  .details {
-    background: rgb(190,97,57); /*Deep brown*/
-    color: rgb(218,242,238);
-    padding: 24px 12px 0px 12px;
-    margin-bottom: 24px;
-  }
-  .details h1 {
-    color: rgb(218,242,238);
-    padding-bottom: 12px;
-  }
-  .details a {
-    color: rgb(222,147,67); /*Orange*/
-  }
-  .previews {
-    margin: 0px 12px;
-    color: #777;
-  }
-  @media screen and (min-width: 400px) {
-    header,footer,.pitch,.previews {
-      margin: 0 5%;
-    }
-    .details {
-      padding: 0 5%;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    header,footer,.pitch,.previews {
-      margin: 24px 25% 0px 15%;
-    }
-    header { margin-right: 0; }
-    .details {
-      padding: 24px 20% 0px 10%;
-    }
-  }
-  @media screen and (min-width: 700px) {
-    header h1 { width: 20%; }
-  }
-  @media screen and (min-width: 1000px) {
-    #content {
-      position: relative;
-    }
-    .pitch,.previews,header,footer {
-      margin-left: 10%;
-      width: 50%;
-    }
-    header,header h1 { width: auto; }
-   .details {
-      position: absolute;
-      width: 25%;
-      left: 65%;
-      top: 0px;
-      padding: 24px 2.5%;
-   }
-  }
-  </style>
-  <script type="text/javascript" src="//use.typekit.net/atr4yym.js"></script>
+  <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+
+      //Utility class for JavaScript detection in CSS
+      $('html').addClass('hasjs');
+
+      // Get the current time as a Unix timestamp
+      currentTime = new Date();
+      currentTime = Math.round(currentTime.getTime() / 1000);
+
+      // Highlight the current and next wek
+      var futureWeeks = []
+
+      $('.week').each(function() {
+          weekTime = $(this).attr('data-expires');
+          if ((weekTime - currentTime) > 0) {
+            futureWeeks.push($(this));
+          }
+      });
+
+      if (futureWeeks.length > 0) {
+        futureWeeks[0].addClass('is-current');
+        futureWeeks[0].attr('id','current-week');
+        futureWeeks[1].addClass('is-next');
+        $('.week.is-next').append('<a id="show-calendar" href="#current-week">Show Full Calendar</a>');
+
+        $('#show-calendar').click(function() {
+          $(this).hide();
+          $('.week').addClass('is-visible');
+          $('.week').last().append('<p><a id="hide-calendar" href="#current-week">Hide Full Calendar</a></p>');
+          $('#hide-calendar').click(function() {
+            $('#show-calendar').show();
+            $(this).remove();
+            $('.week').removeClass('is-visible');
+          });
+        });
+      } else {
+        $('.week').addClass('is-visible');
+      }
+
+
+      // Show/hide content
+      $('h2.label').click(function() {
+        $(this).toggleClass('is-active');
+        $(this).next('.content').toggleClass('is-visible');
+      });
+
+      $('h2.label.calendar').click(function() {
+        $('.week').toggleClass('is-visible');
+      });
+
+    });
+  </script>
+  <script type="text/javascript" src="//use.typekit.net/njk3tye.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-<header>
-  <h1>Application Programming Interfaces</h1>
-  <p>
-    A new course to be taught by <a href="http://karlstolley.com/">Prof. Karl Stolley</a> at
-    <a href="http://www.iit.edu/">IIT</a> in Fall 2013.
-  </p>
-</header>
+<div id="page">
+  <div id="header">
+    <h1>Application Programming Interfaces</h1>
+    <p class="tagline">
+      Theory and application of accessing, manipulating, and creating RESTful Web APIs. Meets
+      Wednesday nights, 6:25-9:05pm, during Fall Semester 2013.
+    </p>
+  </div>
 
-<div id="content">
-<div class="pitch">
-<p>
-  <b>What do the Chicago Transit Authority, <i>The New York Times</i>, Instagram, Twitter,
-  and fans of the band Phish have in common?</b> Each offers data APIs that provide some level of
-  access to data generated and curated by the organization and its users. These APIs are
-  in the company of <a href="http://www.programmableweb.com/apis/directory/1?sort=category">thousands of others</a>
-  that provide access to data and services ranging categories from weather to music to shopping.
-</p>
-<p>
-  <b>If you’re looking to learn how to access, archive, repackage, and/or create new mashups of open
-  data, this class is for you.</b> Whether your purpose is to create a dataset for analysis or to
-  build the next killer Web or mobile app, you’ll learn how to access and manipuate a wide range of
-  protocols and response formats common to data APIs. You’ll also learn to navigate the sometimes
-  spare documentation for APIs, including any given API’s terms of service. And if you have or are
-  looking to build a data set to share openly with the rest of the world through your own API,
-  you’ll learn how to do that, too.
-</p>
+  <div id="calendar">
+    <h2 class="label calendar">Calendar</h2>
+    <ol>
+      <li class="week" data-expires="1377738000">
+        <h3>Welcome, Tech Setup; “Interface” <small>August 21</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Review course policies &amp; schedule</li>
+            <li>Introduce <a href="#projects">first project</a></li>
+            <li>
+              <a href="https://github.com/karlstolley/lab/wiki">Lab setup</a>
+            </li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class (August 28)</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li>
+                  Set up your computer with an editor of choice; Unix-style line endings (LF) and
+                  UTF-8 (Unicode) character encoding; two-space tab insertions
+                </li>
+                <li>
+                  Sign up for a <a href="http://github.com">GitHub account</a>
+                </li>
+                <li>
+                  Sign up for a <a href="http://twitter.com/">Twitter account</a>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1378342800">
+        <h3>“Programming”<small>August 28</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1378947600">
+        <h3>“Application” <small>September 4</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1379552400">
+        <h3>Documentation <small>September 11</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1380157200">
+        <h3>Data Formats: XML; JSON &amp; JSONP <small>September 18</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1380762000">
+        <h3>Client-Side API Consumption <small>September 25</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1381366800">
+        <h3>Server-side Consumption: Node.js I <small>October 2</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1381971600">
+        <h3>Authentication: Node.js II <small>October 9</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1382576400">
+        <h3>Data Sanitization <small>October 16</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1383181200">
+        <h3>Work Week <small>October 23</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1383789600">
+        <h3>Project Presentations <small>October 30</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Project presentations</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li>App.net API Documentation (early commit)</li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1384394400">
+        <h3>API Production: Documentation <small>November 6</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1384999200">
+        <h3>API Production: Interface <small>November 13</small></h3>
+        <div class="agenda">
+          <h4>In Class</h4>
+          <ol>
+            <li>Reading discussion</li>
+          </ol>
+        </div>
+        <div class="assigned">
+          <h4>For Next Class</h4>
+          <dl>
+            <dt>To Read</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+            <dt>To Do</dt>
+            <dd>
+              <ol>
+                <li></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="week" data-expires="1385604000">
+        <h3>API Production: Application <small>November 20</small></h3>
+        <h4>In Class</h4>
+        <ol>
+          <li></li>
+        </ol>
+        <h3 class="bye-week">No Class (Thanksgiving Break) <small>November 27</small></h3>
+      </li>
+      <li class="week" data-expires="1387346400">
+        <h3>Finals Week</h3>
+        <h4>Project due to instructor by 5:00pm on December 6; Presentation Time TBA</h4>
+      </li>
+    </ol>
+  </div>
+
+  <div id="instructor">
+    <h2 class="label">Instructor</h2>
+    <ul class="content">
+      <li><a href="http://karlstolley.com/">Prof. Karl Stolley</a></li>
+      <li>karl.stolley@gmail.com</li>
+      <li>karlstolley on <a href="http://twitter.com/karlstolley">Twitter</a>,
+        <a href="https://alpha.app.net/karlstolley">App.net</a>, &amp;
+        <a href="http://kik.com/">Kik</a>.
+      </li>
+      <li>Office in Siegel Hall 218</li>
+      <li>Office hours on Wednesdays, 4pm to 5pm &amp; by appointment</li>
+    </ul>
+  </div>
+
+  <div id="projects">
+    <h2 class="label">Projects</h2>
+    <div class="content">
+
+      <h3>Project 1: <small>Due September 18</small></h3>
+      <p>
+        Description...
+      </p>
+      <h4>Project Goals</h4>
+      <ul class="goals">
+        <li>
+        </li>
+      </ul>
+      <h4>Deliverables &amp; Milestones</h4>
+      <ol class="deliverables">
+        <li>
+          A self-critique memo that evaluates your project and your progress in the class to this
+          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
+          repository for the project)
+        </li>
+        <li>
+          A GitHub repository of your files
+        </li>
+      </ol>
+      <h4>Requirements</h4>
+      <dl class="requirements">
+        <dt>Your XXX must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Your YYY must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <h3>Project 2: <small>Due October 30</small></h3>
+      <p>
+        Description...
+      </p>
+      <h4>Project Goals</h4>
+      <ul class="goals">
+        <li>
+        </li>
+      </ul>
+      <h4>Deliverables &amp; Milestones</h4>
+      <ol class="deliverables">
+        <li>
+          A self-critique memo that evaluates your project and your progress in the class to this
+          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
+          repository for the project)
+        </li>
+        <li>
+          A GitHub repository of your files
+        </li>
+      </ol>
+      <h4>Requirements</h4>
+      <dl class="requirements">
+        <dt>Your XXX must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Your YYY must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <h3>Project 3: <small>Due December 5</small></h3>
+      <p>
+        Description...
+      </p>
+      <h4>Project Goals</h4>
+      <ul class="goals">
+        <li>
+        </li>
+      </ul>
+      <h4>Deliverables &amp; Milestones</h4>
+      <ol class="deliverables">
+        <li>
+          A self-critique memo that evaluates your project and your progress in the class to this
+          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
+          repository for the project)
+        </li>
+        <li>
+          A GitHub repository of your files
+        </li>
+      </ol>
+      <h4>Requirements</h4>
+      <dl class="requirements">
+        <dt>Your XXX must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Your YYY must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <h3>Project 4 (COM580 Only): Better Know a Format <small>Due At Some Point</small></h3>
+      <p>
+        Description...
+      </p>
+      <h4>Project Goals</h4>
+      <ul class="goals">
+        <li>
+        </li>
+      </ul>
+      <h4>Deliverables &amp; Milestones</h4>
+      <ol class="deliverables">
+        <li>
+          A self-critique memo that evaluates your project and your progress in the class to this
+          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
+          repository for the project)
+        </li>
+        <li>
+          A GitHub repository of your files
+        </li>
+      </ol>
+      <h4>Requirements</h4>
+      <dl class="requirements">
+        <dt>Your XXX must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+        <dt>Your YYY must:</dt>
+        <dd>
+          <ul>
+            <li></li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <div id="policies">
+    <h2 class="label">Policies</h2>
+    <div class="content">
+      <ol>
+        <li>
+          <h3>Course Description</h3>
+          <p>
+            This is a production-intensive course in the theory and applied involvement with
+            Application Programming Interfaces (APIs), especially Web-available APIs for exchanging
+            and mashing up content and data. The course begins with a consideration of the classical
+            sense of APIs: as interfaces into programming languages and libraries, including a
+            consideration of the quality and navigability of documentation. An understanding and
+            command of those APIs will be necessary to more fully explore and manipulate data APIs
+            later in the course. The course concludes with the groundwork necessary to construct,
+            document, and share an API with the outside world, using lightweight data serialization
+            formats (e.g., JSON) and RESTful distributed architecture. Students will have the
+            opportunity to focus on a specific use of APIs, such as visualization, “scraping” for
+            the purposes of creating datasets for research, or building custom and novel visual
+            interfaces for interacting with a particular dataset or service (e.g., App.net).
+            Throughout the course, students will encounter issues of licensing, API request limits,
+            and other legal and ethical issues surrounding terms of service (TOS) and documentation.
+          </p>
+        </li>
+        <li>
+          <h3>Course Goals</h3>
+          <ul>
+            <li>
+              Develop familiarity with the key principles of Application Programming Interfaces,
+              for both programming languages and data/software services, and as both a consumer
+              and producer of APIs
+            </li>
+            <li>
+              Develop critical reading skills for navigating and comprehending the documentation for
+              APIs
+            </li>
+            <li>
+              Learn to locate, read, and act in accordance with Web API providers’ terms of service
+            </li>
+            <li>
+              Understand and employ lightweight data serialization formats (e.g., JSON) on both
+              the client- and server-side
+            </li>
+            <li>
+              Understand and implement web standards from the World Wide Web Consortium (W3C), Ecma,
+              ISO, and other standards-issuing groups
+            </li>
+            <li>
+              Understand and apply progressive enhancement and responsive design in any user-facing
+              web design and development
+            </li>
+            <li>
+              Develop an agile approach to digital development, supplemented by the use of a version
+              control system (Git)
+            </li>
+            <li>
+              Apply course concepts and adjust/extend course projects to fit your own academic and
+              professional interests
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Materials and Technologies</h3>
+          <h4>Required Texts</h4>
+          <ul>
+            <li>
+              Copeland, David Bryant. (2012). <cite>Build Awesome Command-Line Applications in Ruby:
+              Control Your Computer, Simplify Your Life</cite>. Pragmatic Bookshelf.
+            </li>
+            <li>
+              Crockford, Douglas. (2008). <cite>JavaScript: The Good Parts</cite>. O’Reilly.
+            </li>
+            <li>
+              Haverbeke, Marijn. (2011). <cite>Eloquent JavaScript: A Modern Introduction to
+              Programming</cite>. No Starch Press.
+            </li>
+            <li>
+              Rauch, Guillermo. (2012). <cite>Smashing Node.js: JavaScript Everywhere</cite>. 2nd
+              edition. Wiley.
+            </li>
+            <li>
+              Plus other electronic books, articles, and materials linked to from the course
+              calendar
+            </li>
+          </ul>
+          <h4>Required Technologies</h4>
+          <ul>
+            <li>A <a href="https://github.com/">GitHub</a> account (free/public or pay/private)</li>
+            <li>A private/public RSA key pair (we will create these in class if you don't yet have them)</li>
+            <li>A sketchbook</li>
+          </ul>
+          <h4>Recommended Technologies</h4>
+          <ul>
+            <li>A Ubuntu installation (or Ubuntu Live CD) to run Ubuntu Linux on your own computer</li>
+            <li>A Twitter account</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Grading Policy: COM381 Students</h3>
+          <ul>
+            <li>Project 1: 10pts</li>
+            <li>Project 2: 40pts</li>
+            <li>Project 3: 20pts</li>
+            <li>Class Participation: 30pts</li>
+            <li>TOTAL: 100pts</li>
+          </ul>
+          <p>A = 90+ pts; B = 80-89pts; C = 70-79pts; D = 60-69pts; E =&lt; 59 pts</p>
+          <h4>Grading Criteria</h4>
+          <ul>
+            <li>
+              A - Student has turned in all required components of a project, the work is
+              exceptional in quality, and reflects the student’s dedication to adjusting the project
+              to his or her own interests.
+            </li>
+            <li>
+              B - Student has turned in all required components of a project, and the work is
+              exceptional for undergraduate work.
+            </li>
+            <li>
+              C - Student has turned in all required components of a project and submitted work that
+              is acceptable as undergraduate level.
+            </li>
+            <li>
+              D - Student has turned in all required components of a project, but the work is below
+              undergraduate level.
+            </li>
+            <li>
+              E - Student has not turned in all required components of a project.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Grading Policy: COM580 Students</h3>
+          <ul>
+            <li>Project 1: 10pts</li>
+            <li>Project 2: 40pts</li>
+            <li>Project 3: 20pts</li>
+            <li>Project 4: 10pts</li>
+            <li>Class Participation: 20pts</li>
+            <li>TOTAL: 100pts</li>
+          </ul>
+          <p>A = 90+ pts; B= 80-89pts; C=70-79pts; E =&lt; 69 pts</p>
+          <h4>Grading Criteria</h4>
+          <ul>
+            <li>
+              A - Student has turned in all required components of a project, the work is
+              exceptional in quality, and reflects the student's dedication to adjusting the project
+              to his or her own interests.
+            </li>
+            <li>
+              B - Student has turned in all required components of a project and submitted work that
+              is acceptable as graduate level.
+            </li>
+            <li>
+              C - Student has turned in all required components of a project, but the work is below
+              graduate level.
+            </li>
+            <li>
+              E - Student has not turned in all required components of a project.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>Course Technology Policy</h3>
+          <p>
+            Because technology is an essential part of working with APIs, it is essential
+            to this class. You are just as responsible for learning to command various technologies
+            (JavaScript and Node.js in particular; some Ruby, as well as Git) as for any other
+            course content. Difficulty with technology is not an acceptable excuse for being
+            unprepared for class.
+          </p>
+          <p>
+            If you are having trouble with technology or any other material covered in this course,
+            it is your professional responsibility to do research beyond the resources and guidance
+            provided in class and find materials that work for you. I also encourage all students to
+            meet with me during my office hours or at another arranged time outside of class or to
+            contact me via email or GChat, or our Campfire room, well in advance of project
+            deadlines.
+          </p>
+          <p>
+            Note that coming to class with broken or malfunctioning work is far better than showing
+            up with nothing but an excuse like “I just didn’t get it.” For most of the semester, it
+            is <em>expected</em> that you’ll show up with broken work. When you’re learning, effort
+            is more important than perfection. Just be sure to put in the effort early, and not the
+            night before a project is due.
+          </p>
+        </li>
+        <li>
+          <h3>Attendance and Participation</h3>
+          <p>
+            Your attendance and active participation are required both for your own success in the
+            class, and for the success of the class as a whole. However, if you absolutely must
+            miss, please contact me ahead of time via email.
+          </p>
+        </li>
+        <li>
+          <h3>Academic Honesty</h3>
+          <p>
+            As with any course at IIT, you are expected to uphold the Code of Academic Honesty as
+            described in the
+            <a href="http://www.iit.edu/student_affairs/handbook/information_and_regulations/code_of_academic_honesty.shtml">IIT Student Handbook</a>).
+            All work for this course must be your own original effort, including print and digital
+            page design and computer code. Summarizations and quotations of text, as well as any use
+            of open-source code libraries and images not of your own making, should be clearly cited
+            as legally and ethically warranted and rhetorically appropriate. Access, storage,
+            dissemination, and other use of data from third-party sources must conform to the
+            source’s terms of service, licensing, and other relevant legal and ethical restrictions.
+          </p>
+          <p>
+            If you are at all uncertain as to whether you are submitting work that in whole or in
+            part may violate the Code of Academic Honesty, please contact me immediately and before
+            the work is due. The consequences of academic dishonesty are severe. Any student who
+            violates the Code of Academic Honesty will be subject to expulsion from this course with
+            a failing grade, and I will report the student to the Chair of the Department of
+            Humanities, who may take additional disciplinary action, including reporting
+            violations to the relevant offices of Undergraduate or Graduate Academic Affairs.
+          </p>
+        </li>
+        <li>
+          <h3>Special Needs Statement</h3>
+          <p>
+            Reasonable accommodations will be made for students with documented disabilities. In
+            order to receive accommodations, students must obtain a letter of accommodation from the
+            Center for Disability Resources. The Center for Disability Resources (CDR) is located in
+            IIT Tower, 3424 S. State Street - 1C3-2. Contact the Center by telephone at 312-567-5744
+            or via email at disabilities@iit.edu
+          </p>
+          <p>
+            Students who have any difficulty (either permanent or temporary) that might affect their
+            ability to perform in class should contact me privately, either in person or via email,
+            at the start of the semester or as a documented difficulty arises. Methods, materials,
+            or deadlines will be adapted as necessary to ensure equitable participation for all
+            students.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p class="fineprint">
+      Course &amp; site design by <a href="http://karlstolley.com/">Karl Stolley</a>. Licensed under
+      <a href="http://creativecommons.org/licenses/by-nc/2.0/" rel="license">Creative Commons</a>.
+      <a href="https://github.com/karlstolley/api">Source hosted on GitHub</a>.
+    </p>
+  </div>
+
 </div>
-<div class="details">
-<h1>Wait, what’s an&nbsp;API?</h1>
-<p>
-  The Application Programming Interface (API) is a concept for exposing functionality and data of a
-  system or service. APIs make it possibile to access software functionality or system data within
-  and across different platforms. The focus of this course will be web-based data APIs, but we will
-  begin by looking at APIs for software libraries and frameworks, particularly Ruby and JavaScript
-  and JavaScript projects such as <a href="http://api.jquery.com/">jQuery</a> and
-  <a href="http://nodejs.org/api/">Node.js</a> (we will use those to build projects for accessing
-  and manipulating data APIs and, later, creating our own APIs).
-</p>
-<p>
-  The course will be divided into two parts: API consumption and API production. Within the
-  consumption part, which will be about two-thirds of the course, we will look first at programming
-  APIs (e.g., for jQuery) and then more extensively at web-available data APIs. The creation portion
-  that makes up the last third of the course will focus on the creation of RESTful data APIs in
-  JSON, and writing documentation to describe access methods and procedures for other people.
-</p>
-</div>
-<div class="previews">
-<h2>Some Course Goals</h2>
-<p>Students in the course can expect to learn to:</p>
-<ul>
-  <li>Locate open data APIs and gain access to restricted APIs</li>
-  <li>Work with API keys and authentication</li>
-  <li>Develop effective strategies for navigating and reading API documentation</li>
-  <li>Understand common web-API response and data serialization formats</li>
-  <li>Mash up the data from one API with the data from one or more additional APIs</li>
-  <li>Build and document RESTful web APIs that others may use</li>
-</ul>
-<h2>Some Likely Course Readings</h2>
-<ul>
-  <li>Mike Amundsen, <i>Building Hypermedia APIs with HTML5 and Node</i></li>
-  <li>David Copeland, <i>Building Awesome Command-Line Applications with Ruby</i></li>
-  <li>Marijn Haverbeke, <i>Eloquent JavaScript</i></li>
-  <li>Larry Lessig, <i>Remix: Making Art and Commerce Thrive in the Hybrid Economy</i></li>
-  <li>Travis Swicegood, <i>Programming Node.js</i></li>
-  <li>Jaroslav Tulach, <i>20 API Paradoxes</i></li>
-</ul>
-</div>
-</div>
-<footer>
-  <p>
-    COM580: Application Programming Interfaces will meet Wednesday nights from 6:25 to 9:05
-    beginning August 21, 2013. PhD students in Tech Comm and MS students in IARC and TCID can
-    substitute this course for COM541: Information Structure and Retrieval. Follow the development
-    of this course <a href="https://github.com/karlstolley/api">on GitHub</a>.
-  </p>
-</footer>
 </body>
 </html>

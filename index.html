@@ -31,14 +31,19 @@
         futureWeeks[0].addClass('is-current');
         futureWeeks[0].attr('id','current-week');
         futureWeeks[1].addClass('is-next');
-        $('.week.is-next').append('<a id="show-calendar" href="#current-week">Show Full Calendar</a>');
-
+        $('.week.is-next').after('<li><h2 class="label calendar"><a id="show-calendar" href="#current-week">Show Full Calendar</a></h2></li>');
+        $('#calendar > h2').hide();
+        $('#current-week h3').text(function(index,text) {
+          $(this).text("This Week: " + text);
+        });
         $('#show-calendar').click(function() {
           $(this).hide();
+          $('#calendar > h2').show();
           $('.week').addClass('is-visible');
           $('.week').last().append('<p><a id="hide-calendar" href="#current-week">Hide Full Calendar</a></p>');
           $('#hide-calendar').click(function() {
             $('#show-calendar').show();
+            $('#calendar > h2').hide();
             $(this).remove();
             $('.week').removeClass('is-visible');
           });
@@ -52,10 +57,6 @@
       $('h2.label').click(function() {
         $(this).toggleClass('is-active');
         $(this).next('.content').toggleClass('is-visible');
-      });
-
-      $('h2.label.calendar').click(function() {
-        $('.week').toggleClass('is-visible');
       });
 
     });
@@ -74,7 +75,7 @@
   </div>
 
   <div id="calendar">
-    <h2 class="label calendar">Calendar</h2>
+    <h2 class="label">Calendar</h2>
     <ol>
       <li class="week" data-expires="1377738000">
         <h3>Welcome, Tech Setup; “Interface” <small>August 21</small></h3>
@@ -89,7 +90,7 @@
           </ol>
         </div>
         <div class="assigned">
-          <h4>For Next Class (August 28)</h4>
+          <h4>For Next Class</h4>
           <dl>
             <dt>To Read</dt>
             <dd>

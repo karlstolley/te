@@ -52,17 +52,17 @@ sub {
 legend {
   color: #000; }
 
+/* 18px */
+/* Modular Scale: http://modularscale.com/scale/?px1=18&px2=24&ra1=1.25&ra2=0 */
 /* Base */
 html {
-  background-color: #eeeef6; }
+  font-size: 100%; }
 
 body {
-  font-family: "ff-tisa-web-pro", Arial, "Times New Roman", Times, serif;
-  font-size: 18px;
-  line-height: 26px;
-  background-color: #eeeef6;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
+  font-size: 1.125em;
+  line-height: 1.333em;
+  padding: 0.683em; }
 
 i, em, cite {
   font-style: italic; }
@@ -71,133 +71,52 @@ b, strong {
   font-weight: bold; }
 
 code {
-  font-family: Monaco, Courier, monospace;
-  font-size: 14px;
-  background-color: #d7d7ea; }
+  font-family: Monaco, Courier, monospace; }
 
 a {
-  color: #cc0000;
   text-decoration: none;
   border-bottom: 1px dotted; }
-  a:visited {
-    color: #660000; }
-  a:hover {
-    color: #cc0000;
-    border-bottom: 1px solid; }
-  a:active {
-    border-bottom: 1px solid; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "proxima-nova-alt-ext-cond", Helvetica, Arial, sans-serif;
-  text-transform: uppercase; }
-
-h1 {
-  font-size: 36px;
-  line-height: 39px; }
+  font-size: 1.563em;
+  font-weight: bold; }
 
 h3 small {
-  letter-spacing: .1em;
-  color: #999;
+  letter-spacing: 0.06845809341011em;
+  /* .107em / 1.563em = */
   display: block; }
-
-h4 {
-  color: #777; }
-
-dt {
-  text-transform: uppercase; }
 
 ol > li {
   list-style-type: decimal;
-  margin-left: .5em; }
+  margin-left: 1.953em; }
 
 ul > li {
-  list-style-type: disc;
-  margin-left: 1em; }
+  list-style-type: square;
+  margin-left: 1.953em; }
 
 /* Layout */
-#header {
-  padding: 1em;
-  border-bottom: 1px solid #cc0000; }
-
 /* Module */
 .tagline,
 .fineprint {
   color: #888;
   font-style: italic; }
 
-.fineprint {
-  padding: 26px 18px; }
-
-.label {
-  background: white;
-  color: #cc0000; }
-
-h2.label {
-  padding: 26px 18px 25px 18px;
-  border-bottom: 1px solid #cc0000; }
-
-h2.label + .content {
-  margin: 18px; }
-
-.content > li,
 .content > li {
   margin-left: 0;
   padding-left: 0; }
 
-h2.label.calendar + ol > li {
-  margin: 18px; }
-
-.week {
-  margin-bottom: 26px; }
-  .week dt {
-    padding-top: 6.5px; }
-
-.week ol {
-  margin-left: 1em; }
-
-.bye-week {
-  margin: 26px 0 13px 0; }
-
 #calendar > ol > li,
 #instructor > ul > li {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-left: 0; }
 
 #policies ol > li {
   list-style-type: none;
   margin-left: 0; }
 
-.agenda, .assigned {
-  margin-top: 13px; }
-
-.agenda ol {
-  padding-top: 6.5px; }
-
-.goals, .deliverables {
-  margin-left: 18px; }
-
-ol.goals, ol.deliverables {
-  margin-left: 28.8px; }
-
-.content h3 {
-  margin-top: 13px; }
-.content h4 {
-  margin-top: 6.5px;
-  margin-bottom: 13px; }
-.content p, .content ol, .content ul {
-  margin-bottom: 26px; }
-
-div.content * ol, div.content * ul {
-  margin-left: 18px; }
-
 /* State */
 .hasjs .label {
   cursor: pointer; }
-.hasjs .label.is-active,
-.hasjs .label:hover {
-  background-color: #cc0000;
-  color: white; }
 .hasjs .content {
   display: none; }
 .hasjs .content.is-visible {
@@ -208,11 +127,6 @@ div.content * ol, div.content * ul {
   display: block; }
 .hasjs .week.is-current {
   display: block; }
-  .hasjs .week.is-current .assigned {
-    background-color: #FF6;
-    padding: 13px; }
-    .hasjs .week.is-current .assigned h4 {
-      color: black; }
 .hasjs .week.is-next {
   display: block; }
 

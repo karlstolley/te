@@ -33,7 +33,6 @@ code {
 }
 a {
   text-decoration: none;
-  border-bottom: 1px dotted;
   &:link { }
   &:visited {
   }
@@ -43,14 +42,12 @@ a {
   }
 }
 h1,h2,h3,h4,h5,h6 {
-  font-size: 1.563em;
   font-weight: bold;
 }
 h1 {
 }
 h3 {
   small {
-    letter-spacing: 0.06845809341011em; /* .107em / 1.563em = */
     display: block;
   }
 }
@@ -162,7 +159,7 @@ div.content {
     }
   }
   .week.is-next {
-    display: block;
+    //display: block;
   }
 }
 /* === Media Queries === */

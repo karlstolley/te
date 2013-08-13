@@ -74,16 +74,12 @@ code {
   font-family: Monaco, Courier, monospace; }
 
 a {
-  text-decoration: none;
-  border-bottom: 1px dotted; }
+  text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.563em;
   font-weight: bold; }
 
 h3 small {
-  letter-spacing: 0.06845809341011em;
-  /* .107em / 1.563em = */
   display: block; }
 
 ol > li {
@@ -126,8 +122,6 @@ ul > li {
 .hasjs .week.is-visible {
   display: block; }
 .hasjs .week.is-current {
-  display: block; }
-.hasjs .week.is-next {
   display: block; }
 
 /* === Media Queries === */

@@ -104,9 +104,13 @@ ul > li {
 h2.label, h2.label a {
   background: #fff6ed;
   color: #180d48;
+  display: block;
   font-weight: normal; }
   h2.label:hover, h2.label:active, h2.label a:hover, h2.label a:active {
     color: #fc4d60; }
+
+h2.label, .content, #footer {
+  padding: 0.6665em; }
 
 .content > li {
   margin-left: 0;
@@ -124,19 +128,18 @@ h2.label, h2.label a {
 /* State */
 .hasjs .label {
   cursor: pointer; }
-.hasjs .content {
+.hasjs .extended {
   display: none; }
-.hasjs .content.is-visible {
+.hasjs .content.is-visible .extended {
   display: block; }
-.hasjs .week {
-  display: none; }
-.hasjs .week.is-visible {
-  display: block; }
-.hasjs .week.is-current {
-  display: block; }
+.hasjs #show-calendar {
+  margin-bottom: 1.333em; }
 
 /* === Media Queries === */
 /* Tiny */
 /* Small */
+@media screen and (min-width: 600px) {
+  .hasjs header .extended {
+    display: inherit; } }
 /* Big */
 /* Massive */

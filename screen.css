@@ -53,10 +53,13 @@ legend {
   color: #000; }
 
 /* 18px */
+/* Color Inspiration from http://www.colourlovers.com/palette/2991458/Bedroom */
 /* Modular Scale: http://modularscale.com/scale/?px1=18&px2=24&ra1=1.25&ra2=0 */
 /* Base */
 html {
-  font-size: 100%; }
+  font-size: 100%;
+  background: #180d48;
+  color: #fff6ed; }
 
 body {
   font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
@@ -74,7 +77,8 @@ code {
   font-family: Monaco, Courier, monospace; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ebcb92; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
@@ -94,8 +98,15 @@ ul > li {
 /* Module */
 .tagline,
 .fineprint {
-  color: #888;
+  color: #a5a5a5;
   font-style: italic; }
+
+h2.label, h2.label a {
+  background: #fff6ed;
+  color: #180d48;
+  font-weight: normal; }
+  h2.label:hover, h2.label:active, h2.label a:hover, h2.label a:active {
+    color: #fc4d60; }
 
 .content > li {
   margin-left: 0;

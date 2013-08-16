@@ -11,7 +11,15 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 $lineheight: 1.333em;
 $fontsize: 1.125em; /* 18px */
-$accentcolor: #C00;
+
+/* Color Inspiration from http://www.colourlovers.com/palette/2991458/Bedroom */
+$forecolor: #FFF6ED;
+$backcolor: #180D48;
+$neutcolor: #EBCB92;
+$acctcolor: #FC4D60;
+
+$neutgray: grayscale($neutcolor);
+$acctgray: grayscale($acctcolor);
 
 /* Modular Scale: http://modularscale.com/scale/?px1=18&px2=24&ra1=1.25&ra2=0 */
 
@@ -19,6 +27,8 @@ $accentcolor: #C00;
 /* Base */
 html {
   font-size: 100%;
+  background: $backcolor;
+  color: $forecolor;
 }
 body {
   font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
@@ -33,6 +43,7 @@ code {
 }
 a {
   text-decoration: none;
+  color: $neutcolor;
   &:link { }
   &:visited {
   }
@@ -73,15 +84,22 @@ ul > li {
 /* Module */
 .tagline,
 .fineprint {
-  color: #888;
+  color: $acctgray;
   font-style: italic;
 }
-.fineprint {
+.fineprint a {
 }
 .label {
 }
-h2.label {
+h2.label, h2.label a {
+  background: $forecolor;
+  color: $backcolor;
+  font-weight: normal;
+  &:hover,&:active {
+    color: $acctcolor;
+  }
 }
+
 
 h2.label + .content { }
 

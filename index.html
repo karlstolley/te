@@ -40,7 +40,8 @@
           $(this).hide();
           $('.week').addClass('is-visible');
           $('#calendar > h2').show();
-          $('#calendar > h2').html('<a id="hide-calendar" href="#current-week">Calendar</a>');
+          //$('#calendar > h2').html('<a id="hide-calendar" href="#current-week">Calendar</a>');
+          $('#calendar > h2').html('Calendar');
           $('#hide-calendar').click(function() {
             $('#show-calendar').show();
             $('#calendar > h2').hide();

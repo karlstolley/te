@@ -101,12 +101,11 @@ ul > li {
   color: #a5a5a5;
   font-style: italic; }
 
-h2.label, h2.label a {
+h2.label {
   background: #fff6ed;
   color: #180d48;
-  display: block;
   font-weight: normal; }
-  h2.label:hover, h2.label:active, h2.label a:hover, h2.label a:active {
+  h2.label:hover, h2.label:active {
     color: #fc4d60; }
 
 h2.label, .content, #footer {
@@ -128,9 +127,9 @@ h2.label, .content, #footer {
 /* State */
 .hasjs .label {
   cursor: pointer; }
-.hasjs .extended {
+.hasjs .is-next, .hasjs .extended {
   display: none; }
-.hasjs .content.is-visible .extended {
+.hasjs .content.is-visible .is-next, .hasjs .content.is-visible .extended {
   display: block; }
 .hasjs #show-calendar {
   margin-bottom: 1.333em; }

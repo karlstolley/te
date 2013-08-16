@@ -91,10 +91,9 @@ ul > li {
 }
 .label {
 }
-h2.label, h2.label a {
+h2.label {
   background: $forecolor;
   color: $backcolor;
-  display: block;
   font-weight: normal;
   &:hover,&:active {
     color: $acctcolor;
@@ -173,9 +172,10 @@ div.content {
 
   }
 
-  .extended { display: none; }
-  .content.is-visible .extended { display: block; }
-
+  .is-next, .extended { display: none; }
+  .content.is-visible {
+    .is-next, .extended { display: block; }
+  }
   #show-calendar {
     margin-bottom: $lineheight;
   }

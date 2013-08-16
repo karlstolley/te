@@ -20,6 +20,14 @@
       // Highlight the current and next wek
       var futureWeeks = []
 
+      $.fn.toggleLabel = function(beforetxt, aftertxt) {
+        var txt = beforetxt;
+        if (this.html()==txt) {
+          txt = aftertxt;
+        }
+        this.html(txt);
+      }
+
       $('.week').each(function() {
           $(this).addClass('extended')
           weekTime = $(this).attr('data-expires');
@@ -29,27 +37,21 @@
       });
 
       if (futureWeeks.length > 0) {
+
         futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
         futureWeeks[1].addClass('preview is-next').removeClass('extended');
-        $('#current-week h3').text(function(index,text) {
-          $(this).text("This Week: " + text);
-        });
 
-        $('#calendar > h2').attr('id','hide-calendar').hide();
-        $('#calendar').append('<h2 id="show-calendar" class="label"><a href="#current-week">Full Calendar</a></h2>');
+        $('#current-week .assigned h4').text('For Next Class (' + $('.is-next h3 small').html() + ')');
 
-        $('#show-calendar').click(function() {
-          $(this).hide();
-          $('#calendar .content').addClass('is-visible');
-          $('#calendar > h2#hide-calendar').show();
+        $('#calendar > h2').html('This Week <a href="#current-week">Show Full Calendar</a>').attr('id','calendar-toggle');
 
-          $('#hide-calendar').click(function() {
-            $(this).hide();
-            $('#show-calendar').show();
-            $('.#calendar .content').removeClass('is-visible');
-          });
-        });
+        $('#calendar-toggle').click(function() { $(this).toggleLabel('This Week <a href="#current-week">Show Full Calendar</a>','Full Calendar <a href="#current-week">Show This Week</a>');});
+
       }
+
+      $('#projects > h2').html('Current Project <a href="#projects">Show All Projects</a>').attr('id','projects-toggle');
+
+      $('#projects-toggle').click(function() { $(this).toggleLabel('Current Project <a href="#projects">Show All Projects</a>', 'All Projects <a href="#projects">Show Current Project</a>'); });
 
       // Show/hide content
       $('h2.label').click(function() {

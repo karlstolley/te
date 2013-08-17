@@ -64,14 +64,16 @@ html {
 body {
   font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
   font-size: 1.125em;
-  line-height: 1.333em;
-  padding: 0.683em; }
+  line-height: 1.333em; }
 
 i, em, cite {
   font-style: italic; }
 
 b, strong {
   font-weight: bold; }
+
+small {
+  font-weight: normal; }
 
 code {
   font-family: Monaco, Courier, monospace; }
@@ -83,9 +85,6 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
-h3 small {
-  display: block; }
-
 ol > li {
   list-style-type: decimal;
   margin-left: 1.953em; }
@@ -95,34 +94,73 @@ ul > li {
   margin-left: 1.953em; }
 
 /* Layout */
-/* Module */
+#content {
+  padding: 0.6665em 0.683em; }
+
+#header, #footer {
+  padding: 0.6665em 0.683em; }
+
+/* Module: Whole Page */
 .tagline,
 .fineprint {
   color: #a5a5a5;
   font-style: italic; }
 
-h2.label {
+.label {
   background: #fff6ed;
   color: #180d48;
-  font-weight: normal; }
-  h2.label:hover, h2.label:active {
-    color: #fc4d60; }
+  font-weight: normal;
+  padding: 0.6665em 0.683em; }
 
-h2.label, .content, #footer {
-  padding: 0.6665em; }
+/* Module: Content Areas */
+.content {
+  padding: 0.6665em 0.683em;
+  padding-top: 0; }
 
-.content > li {
+.content > li,
+#calendar > ol > li,
+#policies ol > li {
+  list-style-type: none;
   margin-left: 0;
   padding-left: 0; }
 
-#calendar > ol > li,
-#instructor > ul > li {
-  list-style-type: none;
-  margin-left: 0; }
+.content h3, .content h4 {
+  padding-top: 0.99975em;
+  padding-bottom: 0.33325em; }
+.content ul, .content ol, .content p {
+  margin-bottom: 0.6665em; }
+.content li {
+  margin-bottom: 0.33325em; }
+.content li:last-child {
+  margin-bottom: 0; }
 
-#policies ol > li {
-  list-style-type: none;
-  margin-left: 0; }
+#instructor li {
+  margin-left: 0.683em;
+  margin-bottom: 0; }
+
+/* Module: Calendar */
+#calendar .content {
+  padding: 0; }
+#calendar ul, #calendar ol, #calendar li {
+  margin-bottom: 0; }
+#calendar h3,
+#calendar .agenda,
+#calendar .assigned {
+  padding: 0.6665em 0.683em;
+  margin-bottom: 0.6665em; }
+#calendar h3 {
+  margin-bottom: 0; }
+#calendar h4 {
+  font-weight: normal; }
+#calendar .agenda {
+  padding-top: 0; }
+  #calendar .agenda h4 {
+    margin-bottom: 0.6665em; }
+#calendar .assigned dt {
+  margin-top: 0.6665em; }
+
+#current-week .assigned {
+  background: rgba(255, 246, 237, 0.2); }
 
 /* State */
 .hasjs .label {

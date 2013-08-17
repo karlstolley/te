@@ -139,7 +139,7 @@ ul > li {
   margin-bottom: 0; }
 
 /* Module: Calendar */
-#calendar .content {
+#calendar .content, #calendar h4 {
   padding: 0; }
 #calendar ul, #calendar ol, #calendar li {
   margin-bottom: 0; }

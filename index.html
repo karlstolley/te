@@ -7,60 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-
-      //Utility class for JavaScript detection in CSS
-      $('html').addClass('hasjs');
-
-      // Get the current time as a Unix timestamp
-      currentTime = new Date();
-      currentTime = Math.round(currentTime.getTime() / 1000);
-
-      // Highlight the current and next wek
-      var futureWeeks = []
-
-      $.fn.toggleLabel = function(beforetxt, aftertxt) {
-        var txt = beforetxt;
-        if (this.html()==txt) {
-          txt = aftertxt;
-        }
-        this.html(txt);
-      }
-
-      $('.week').each(function() {
-          $(this).addClass('extended')
-          weekTime = $(this).attr('data-expires');
-          if ((weekTime - currentTime) > 0) {
-            futureWeeks.push($(this));
-          }
-      });
-
-      if (futureWeeks.length > 0) {
-
-        futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
-        futureWeeks[1].addClass('preview is-next').removeClass('extended');
-
-        $('#current-week .assigned h4').text('For Next Class (' + $('.is-next h3 small').html() + ')');
-
-        $('#calendar > h2').html('This Week <a href="#current-week">Show Full Calendar</a>').attr('id','calendar-toggle');
-
-        $('#calendar-toggle').click(function() { $(this).toggleLabel('This Week <a href="#current-week">Show Full Calendar</a>','Full Calendar <a href="#current-week">Show This Week</a>');});
-
-      }
-
-      $('#projects > h2').html('Current Project <a href="#projects">Show All Projects</a>').attr('id','projects-toggle');
-
-      $('#projects-toggle').click(function() { $(this).toggleLabel('Current Project <a href="#projects">Show All Projects</a>', 'All Projects <a href="#projects">Show Current Project</a>'); });
-
-      // Show/hide content
-      $('h2.label').click(function() {
-        $(this).toggleClass('is-active');
-        $(this).next('.content').toggleClass('is-visible');
-      });
-
-    });
-  </script>
   <script type="text/javascript" src="//use.typekit.net/yth2nbn.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -96,15 +42,18 @@
             <dt>To Read</dt>
             <dd>
               <ol>
-                <li></li>
+                <li>Haverbeke, </li>
               </ol>
             </dd>
             <dt>To Do</dt>
             <dd>
               <ol>
                 <li>
-                  Set up your computer with an editor of choice; Unix-style line endings (LF) and
-                  UTF-8 (Unicode) character encoding; two-space tab insertions
+                  Set up your computer with an editor of your choice; Unix-style line endings (LF)
+                  and UTF-8 (Unicode) character encoding; two-space tab insertions
+                </li>
+                <li>
+                  Work through Haverbeke with the Google Chrome JavaScript console
                 </li>
                 <li>
                   Sign up for a <a href="http://github.com">GitHub account</a>
@@ -862,5 +811,59 @@
   </footer>
 <!--#page-->
 </div>
+  <script type="text/javascript">
+    $(function() {
+
+      //Utility class for JavaScript detection in CSS
+      $('html').addClass('hasjs');
+
+      // Get the current time as a Unix timestamp
+      currentTime = new Date();
+      currentTime = Math.round(currentTime.getTime() / 1000);
+
+      // Highlight the current and next wek
+      var futureWeeks = []
+
+      $.fn.toggleLabel = function(beforetxt, aftertxt) {
+        var txt = beforetxt;
+        if (this.html()==txt) {
+          txt = aftertxt;
+        }
+        this.html(txt);
+      }
+
+      $('.week').each(function() {
+          $(this).addClass('extended')
+          weekTime = $(this).attr('data-expires');
+          if ((weekTime - currentTime) > 0) {
+            futureWeeks.push($(this));
+          }
+      });
+
+      if (futureWeeks.length > 0) {
+
+        futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
+        futureWeeks[1].addClass('preview is-next').removeClass('extended');
+
+        $('#current-week .assigned h4').text('For Next Class (' + $('.is-next h3 small').html() + ')');
+
+        $('#calendar > h2').html('This Week <a href="#current-week">Show Full Calendar</a>').attr('id','calendar-toggle');
+
+        $('#calendar-toggle').click(function() { $(this).toggleLabel('This Week <a href="#current-week">Show Full Calendar</a>','Full Calendar <a href="#current-week">Show This Week</a>');});
+
+      }
+
+      $('#projects > h2').html('Current Project <a href="#projects">Show All Projects</a>').attr('id','projects-toggle');
+
+      $('#projects-toggle').click(function() { $(this).toggleLabel('Current Project <a href="#projects">Show All Projects</a>', 'All Projects <a href="#projects">Show Current Project</a>'); });
+
+      // Show/hide content
+      $('h2.label').click(function() {
+        $(this).toggleClass('is-active');
+        $(this).next('.content').toggleClass('is-visible');
+      });
+
+    });
+  </script>
 </body>
 </html>

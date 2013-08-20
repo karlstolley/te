@@ -100,6 +100,9 @@ ul > li {
 #header, #footer {
   padding: 0.6665em 0.683em; }
 
+#header {
+  padding-bottom: 0; }
+
 /* Module: Whole Page */
 .tagline,
 .fineprint {
@@ -107,13 +110,29 @@ ul > li {
   font-style: italic; }
 
 .label {
-  background: #fff6ed;
-  color: #180d48;
   font-weight: normal;
-  padding: 0.6665em 0.683em; }
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  border-bottom: 1px solid #fff6ed;
+  padding: 1.333em 0em 0.22217em 0em;
+  clear: both; }
+
+.button {
+  clear: both;
+  display: block;
+  color: #180d48;
+  background: #a5a5a5;
+  padding: 0.44433em 0.683em;
+  margin-bottom: 1.333em;
+  margin-left: 66%;
+  text-align: center;
+  border-radius: 0.33325em; }
 
 /* Module: Content Areas */
 .content {
+  padding: 0 0.683em 0 0.683em; }
+
+.content.is-visible {
   padding: 0.6665em 0.683em;
   padding-top: 0; }
 
@@ -131,14 +150,15 @@ ul > li {
   margin-bottom: 0.6665em; }
 .content li {
   margin-bottom: 0.33325em; }
-.content li:last-child {
-  margin-bottom: 0; }
 
 #instructor li {
   margin-left: 0.683em;
   margin-bottom: 0; }
 
 /* Module: Calendar */
+#calendar .button {
+  margin-right: 0.683em;
+  margin-top: 0.9331em; }
 #calendar .content, #calendar h4 {
   padding: 0; }
 #calendar ul, #calendar ol, #calendar li {
@@ -176,7 +196,20 @@ ul > li {
 /* Tiny */
 /* Small */
 @media screen and (min-width: 600px) {
+  body {
+    font-size: 1.2em; }
+
+  #page {
+    padding: 10%; }
+
+  #header, #footer {
+    width: 50%; }
+
   .hasjs header .extended {
-    display: inherit; } }
+    display: inherit; }
+  .hasjs .is-current, .hasjs .is-next {
+    display: block; }
+  .hasjs .week {
+    clear: both; } }
 /* Big */
 /* Massive */

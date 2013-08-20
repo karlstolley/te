@@ -77,6 +77,8 @@ ul > li {
   padding: $lineheight/2 0.683em;
 }
 
+#header { padding-bottom: 0; }
+
 /* Module: Whole Page */
 
 .tagline,
@@ -86,14 +88,29 @@ ul > li {
 }
 
 .label {
-  background: $forecolor;
-  color: $backcolor;
   font-weight: normal;
-  padding: $lineheight/2 0.683em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  border-bottom: 1px solid $forecolor;
+  padding: $lineheight 0em $lineheight/6 0em;
+  clear: both;
+}
+
+.button {
+  clear: both;
+  display: block;
+  color: $backcolor;
+  background: $acctgray;
+  padding: $lineheight/3 0.683em;
+  margin-bottom: $lineheight;
+  margin-left: 66%;
+  text-align: center;
+  border-radius: $lineheight/4;
 }
 
 /* Module: Content Areas */
-.content {
+.content { padding: 0 0.683em 0 0.683em; }
+.content.is-visible {
   padding: $lineheight/2 0.683em;
   padding-top: 0;
 }
@@ -116,7 +133,6 @@ ul > li {
     margin-bottom: $lineheight/2;
   }
   li { margin-bottom: $lineheight * .25; }
-  li:last-child { margin-bottom: 0; }
 }
 
 #instructor li {
@@ -126,6 +142,7 @@ ul > li {
 
 /* Module: Calendar */
 #calendar {
+  .button { margin-right: 0.683em; margin-top: $lineheight * .7; }
   .content, h4 {
     padding: 0;
   }
@@ -186,8 +203,20 @@ ul > li {
 
 /* Small */
 @media screen and (min-width: 600px) {
+  $fontsize: 1.2em;
+  body { font-size: $fontsize; }
+  #page {
+    padding: 10%;
+  }
+  #header,#footer {
+    width: 50%;
+  }
   .hasjs {
     header .extended { display: inherit; }
+    .is-current, .is-next {
+      display: block;
+    }
+    .week { clear: both; }
   }
 }
 /* Big */

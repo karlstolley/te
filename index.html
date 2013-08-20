@@ -15,7 +15,8 @@
   <header id="header">
     <h1>Technical Editing</h1>
     <p class="tagline">
-      Online course in the theory, principles, and intensive practice in various forms of editing.
+      Online course in the theory, principles, and intensive practice in various forms of editing,
+      taught by <a href="#instructor">Prof. Karl Stolley</a>.
     </p>
   </header>
 
@@ -644,8 +645,8 @@
   <div id="instructor">
     <h2 class="label">Instructor</h2>
     <div class="content">
-    <h3 class="extended"><a href="http://karlstolley.com/">Prof. Karl Stolley</a></h3>
-    <ul class="extended">
+    <h3 class="preview"><a href="http://karlstolley.com/">Prof. Karl Stolley</a></h3>
+    <ul class="preview">
       <li>karl.stolley@gmail.com</li>
       <li>karlstolley on <a href="http://twitter.com/karlstolley">Twitter</a>,
         <a href="https://alpha.app.net/karlstolley">App.net</a>, &amp;
@@ -660,27 +661,27 @@
   <div id="policies">
     <h2 class="label">Policies</h2>
     <div class="content">
+      <div class="preview">
+        <h3>Course Description</h3>
+        <p>
+          This course covers the theory, principles, and intensive practice of various forms of
+          editing, including basic copyediting, comprehensive editing, and proofreading. The
+          course includes broad coverage of grammar and mechanics, usage and style, and the
+          rhetorical dimensions of dictionaries, style guides/manuals, and other reference works.
+          The course covers the traditional symbols for editorial marks on paper or paper-like
+          copy (e.g., PDFs), but also offers a look at the use of wikis and version control for
+          handling the editing of born-digital writing.
+        </p>
+        <p>
+          Technical editing is just one of many professional activities that occurs almost
+          exclusively in a remote, digital setting. The online nature of this course emphasizes
+          and reflects the importance of learning to work remotely. As an online course, Technical
+          Editing is meant to be more than an opportunity for students to learn while wearing
+          pajamas. Students will learn to collaborate and communicate effectively in a remote,
+          digitally mediated environment for individual and group projects.
+        </p>
+      </div>
       <ol class="extended">
-        <li>
-          <h3>Course Description</h3>
-          <p>
-            This course covers the theory, principles, and intensive practice of various forms of
-            editing, including basic copyediting, comprehensive editing, and proofreading. The
-            course includes broad coverage of grammar and mechanics, usage and style, and the
-            rhetorical dimensions of dictionaries, style guides/manuals, and other reference works.
-            The course covers the traditional symbols for editorial marks on paper or paper-like
-            copy (e.g., PDFs), but also offers a look at the use of wikis and version control for
-            handling the editing of born-digital writing.
-          </p>
-          <p>
-            Technical editing is just one of many professional activities that occurs almost
-            exclusively in a remote, digital setting. The online nature of this course emphasizes
-            and reflects the importance of learning to work remotely. As an online course, Technical
-            Editing is meant to be more than an opportunity for students to learn while wearing
-            pajamas. Students will learn to collaborate and communicate effectively in a remote,
-            digitally mediated environment for individual and group projects.
-          </p>
-        </li>
         <li>
           <h3>Course Goals</h3>
           <ul>
@@ -939,20 +940,19 @@
 
         $('#current-week .assigned h4').html('Assigned Work <small>(Due ' + dueDate + ' by 12:00pm CT)</small>');
 
-        $('#calendar > h2').html('This Week <a href="#current-week">Show Full Calendar</a>').attr('id','calendar-toggle');
-
-        $('#calendar-toggle').click(function() { $(this).toggleLabel('This Week <a href="#current-week">Show Full Calendar</a>','Full Calendar <a href="#current-week">Show This Week</a>');});
+        $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#calendar">More...</a>');
 
       }
 
-      $('#projects > h2').html('Current Project <a href="#projects">Show All Projects</a>').attr('id','projects-toggle');
+      $('#projects > h2').attr('id','projects-toggle').parent('#projects').find('.content').append('<a class="button" href="#projects">More...</a>');
 
-      $('#projects-toggle').click(function() { $(this).toggleLabel('Current Project <a href="#projects">Show All Projects</a>', 'All Projects <a href="#projects">Show Current Project</a>'); });
+      $('#policies > h2').attr('id','policies-toggle').parent('#policies').find('.content').append('<a class="button" href="#policies">More...</a>');
 
       // Show/hide content
-      $('h2.label').click(function() {
+      $('.button').click(function(e) {
         $(this).toggleClass('is-active');
-        $(this).next('.content').toggleClass('is-visible');
+        $(this).toggleLabel('More...','...less.');
+        $(this).closest('.content').toggleClass('is-visible');
       });
 
     });

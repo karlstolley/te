@@ -1016,16 +1016,16 @@
       if (futureWeeks.length > 0) {
 
         futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
-        futureWeeks[1].addClass('preview is-next').removeClass('extended');
 
-        weekDate = $('.is-next h3 small').html().split(" ");
-        dueDate = weekDate[2] + " " + weekDate[3];
-
-        $('#current-week .assigned h4').html('Assigned Work <small>(Due ' + dueDate + ' by 12:00pm CT)</small>');
-
-        $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week">More...</a>');
-
+        if (futureWeeks[1]!=undefined) {
+          futureWeeks[1].addClass('preview is-next').removeClass('extended');
+          weekDate = $('.is-next h3 small').html().split(" ");
+          dueDate = weekDate[2] + " " + weekDate[3];
+          $('#current-week .assigned h4').html('Assigned Work <small>(Due ' + dueDate + ' by 12:00pm CT)</small>');
+        }
       }
+
+      $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week">More...</a>');
 
       $('#projects > h2').attr('id','projects-toggle').parent('#projects').find('.content').append('<a class="button" href="#projects">More...</a>');
 

@@ -31,9 +31,12 @@ html {
   color: $forecolor;
 }
 body {
-  font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
+  font-family: "cordale", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   font-size: $fontsize;
   line-height: $lineheight;
+}
+dt,h1,h2,h3,h4 {
+  font-family: "soleto", Trebuchet, Verdana, Helvetica, sans-serif;
 }
 i,em,cite { font-style: italic; }
 b,strong { font-weight: bold; }

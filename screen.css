@@ -58,13 +58,19 @@ legend {
 /* Base */
 html {
   font-size: 100%;
-  background: #180d48;
-  color: #fff6ed; }
+  background: #180D48;
+  color: #FFF6ED; }
 
 body {
-  font-family: "akagi-pro", Trebuchet, Verdana, Helvetica, sans-serif;
+  font-family: "cordale", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   font-size: 1.125em;
   line-height: 1.333em; }
+
+dt, h1, h2, h3, h4 {
+  font-family: "soleto", Trebuchet, Verdana, Helvetica, sans-serif; }
+
+dt {
+  text-transform: uppercase; }
 
 i, em, cite {
   font-style: italic; }
@@ -80,7 +86,7 @@ code {
 
 a {
   text-decoration: none;
-  color: #ebcb92; }
+  color: #EBCB92; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
@@ -113,14 +119,14 @@ ul > li {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .2em;
-  border-bottom: 1px solid #fff6ed;
+  border-bottom: 1px solid #FFF6ED;
   padding: 1.333em 0em 0.22217em 0em;
   clear: both; }
 
 .button {
   clear: both;
   display: block;
-  color: #180d48;
+  color: #180D48;
   background: #a5a5a5;
   padding: 0.44433em 0.683em;
   margin-bottom: 1.333em;
@@ -215,3 +221,5 @@ ul > li {
     clear: both; } }
 /* Big */
 /* Massive */
+
+/*# sourceMappingURL=screen.css.map */

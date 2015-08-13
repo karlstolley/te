@@ -13,10 +13,10 @@ $lineheight: 1.333em;
 $fontsize: 1.125em; /* 18px */
 
 /* Color Inspiration from http://www.colourlovers.com/palette/2991458/Bedroom */
-$forecolor: #FFF6ED;
-$backcolor: #180D48;
-$neutcolor: #EBCB92;
-$acctcolor: #FC4D60;
+$forecolor: #333;
+$backcolor: #FCFBE3;
+$neutcolor: #CC5500;
+$acctcolor: #03C4C1;
 
 $neutgray: grayscale($neutcolor);
 $acctgray: grayscale($acctcolor);
@@ -31,13 +31,14 @@ html {
   color: $forecolor;
 }
 body {
-  font-family: "cordale", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+  font-family: "ff-tisa-web-pro", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   font-size: $fontsize;
   line-height: $lineheight;
 }
 dt,h1,h2,h3,h4 {
-  font-family: "soleto", Trebuchet, Verdana, Helvetica, sans-serif;
+  font-family: "freight-sans-pro", Trebuchet, Verdana, Helvetica, sans-serif;
 }
+h2 { color: $acctcolor; }
 i,em,cite { font-style: italic; }
 b,strong { font-weight: bold; }
 small {
@@ -53,8 +54,10 @@ a {
   &:visited {
   }
   &:hover {
+    text-decoration: underline;
   }
   &:active {
+    text-decoration: underline;
   }
 }
 h1,h2,h3,h4,h5,h6 {
@@ -179,7 +182,7 @@ ul > li {
 }
 
 #current-week .assigned {
-  background: transparentize($forecolor, .8);
+  background: transparentize($acctcolor, .8);
 }
 
 

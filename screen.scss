@@ -119,14 +119,20 @@ ul > li {
 
 .button {
   clear: both;
-  display: block;
-  color: $backcolor;
-  background: $acctgray;
-  padding: $lineheight/3 0.64em;
-  margin-bottom: $lineheight;
-  margin-left: 66%;
-  text-align: center;
-  border-radius: $lineheight/4;
+  display: none;
+  margin-bottom: $lineheight * 2;
+  color: $acctcolor;
+  font-weight: bold;
+  &:before {
+    content: "\00BB";
+    padding-right: .25em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.is-active {
+    color: $acctgray;
+  }
 }
 
 /* Module: Content Areas */
@@ -200,6 +206,8 @@ ul > li {
 
 /* State */
 .hasjs {
+
+  .button { display: block; }
 
   .label { cursor: pointer; }
   .label.is-active,

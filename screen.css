@@ -139,14 +139,17 @@ ul > li {
 
 .button {
   clear: both;
-  display: block;
-  color: #FCFBE3;
-  background: #646464;
-  padding: 0.41667em 0.64em;
-  margin-bottom: 1.25em;
-  margin-left: 66%;
-  text-align: center;
-  border-radius: 0.3125em; }
+  display: none;
+  margin-bottom: 2.5em;
+  color: #03C4C1;
+  font-weight: bold; }
+  .button:before {
+    content: "\00BB";
+    padding-right: .25em; }
+    .button:before:hover {
+      text-decoration: none; }
+  .button.is-active {
+    color: #646464; }
 
 /* Module: Content Areas */
 .content > li,
@@ -200,6 +203,8 @@ ul > li {
   background: rgba(3, 196, 193, 0.2); }
 
 /* State */
+.hasjs .button {
+  display: block; }
 .hasjs .label {
   cursor: pointer; }
 .hasjs .extended {

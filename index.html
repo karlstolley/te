@@ -1055,18 +1055,18 @@
           $('#current-week .assigned h4').html('Assigned Work <small>(Due ' + dueDate + ' by 12:00pm CT)</small>');
         }
 
-        $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week">More...</a>');
+        $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week"><span>Show all</span> calendar weeks</a>');
       }
 
 
-      $('#projects > h2').attr('id','projects-toggle').parent('#projects').find('.content').append('<a class="button" href="#projects">More...</a>');
+      $('#projects > h2').attr('id','projects-toggle').parent('#projects').find('.content').append('<a class="button" href="#projects"><span>Show all</span> projects</a>');
 
-      $('#policies > h2').attr('id','policies-toggle').parent('#policies').find('.content').append('<a class="button" href="#policies">More...</a>');
+      $('#policies > h2').attr('id','policies-toggle').parent('#policies').find('.content').append('<a class="button" href="#policies"><span>Show all</span> policies</a>');
 
       // Show/hide content
       $('.button').click(function(e) {
         $(this).toggleClass('is-active');
-        $(this).toggleLabel('More...','...less.');
+        $(this).find('span').toggleLabel('Show all','Close extended view of');
         $(this).closest('.content').toggleClass('is-visible');
       });
 

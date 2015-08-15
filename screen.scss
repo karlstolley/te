@@ -9,8 +9,10 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 // Variables
 
-$lineheight: 1.333em;
-$fontsize: 1.125em; /* 18px */
+/* Modular Scale http://www.modularscale.com/?19&px&1.25&web&text */
+
+$lineheight: 1.25em;
+$fontsize: 1.188em; /* 18px */
 
 /* Color Inspiration from http://www.colourlovers.com/palette/2991458/Bedroom */
 $forecolor: #333;
@@ -20,6 +22,9 @@ $acctcolor: #03C4C1;
 
 $neutgray: grayscale($neutcolor);
 $acctgray: grayscale($acctcolor);
+
+$serifam: "ff-tisa-web-pro", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+$sansfam: "camingodos-web", Trebuchet, Verdana, Helvetica, sans-serif;
 
 /* Modular Scale: http://modularscale.com/scale/?px1=18&px2=24&ra1=1.25&ra2=0 */
 
@@ -31,17 +36,18 @@ html {
   color: $forecolor;
 }
 body {
-  font-family: "ff-tisa-web-pro", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+  font-family: $sansfam;
   font-size: $fontsize;
   line-height: $lineheight;
 }
 dt,h1,h2,h3,h4 {
-  font-family: "freight-sans-pro", Trebuchet, Verdana, Helvetica, sans-serif;
+  font-family: $sansfam;
 }
 h2 { color: $acctcolor; }
 i,em,cite { font-style: italic; }
 b,strong { font-weight: bold; }
 small {
+  font-size: $fontsize * 0.64;
   font-weight: normal;
 }
 code {
@@ -60,27 +66,34 @@ a {
     text-decoration: underline;
   }
 }
-h1,h2,h3,h4,h5,h6 {
+h1 {
+  font-size: $fontsize * 1.25;
+}
+h2,h3,h4,h5,h6 {
   font-weight: bold;
 }
 
 ol > li {
   list-style-type: decimal;
   margin-left: 1.953em;
+  margin-left: 1.3em;
+  padding-left: 0em;
 }
 ul > li {
   list-style-type: square;
   margin-left: 1.953em;
+  margin-left: 1.1em;
+  padding-left: .2em;
 }
 
 /* Layout */
 #page {
 }
 #content {
-  padding: $lineheight/2 0.683em;
+  padding: $lineheight/2 0.64em;
 }
 #header,#footer {
-  padding: $lineheight/2 0.683em;
+  padding: $lineheight 0.64em $lineheight/2 0.64em;
 }
 
 #header { padding-bottom: 0; }
@@ -90,16 +103,18 @@ ul > li {
 .tagline,
 .fineprint {
   color: $acctgray;
-  font-style: italic;
+  font-size: $fontsize * 0.8;
+  padding-top: ($lineheight/0.8)/2 /* 1.25 / .8 = 1.5625 */
 }
 
 .label {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .2em;
-  border-bottom: 1px solid $forecolor;
   padding: $lineheight 0em $lineheight/6 0em;
   clear: both;
+  color: $neutgray;
+
 }
 
 .button {
@@ -107,7 +122,7 @@ ul > li {
   display: block;
   color: $backcolor;
   background: $acctgray;
-  padding: $lineheight/3 0.683em;
+  padding: $lineheight/3 0.64em;
   margin-bottom: $lineheight;
   margin-left: 66%;
   text-align: center;
@@ -115,11 +130,6 @@ ul > li {
 }
 
 /* Module: Content Areas */
-.content { padding: 0 0.683em 0 0.683em; }
-.content.is-visible {
-  padding: $lineheight/2 0.683em;
-  padding-top: 0;
-}
 .content,
 #calendar > ol,
 #policies ol {
@@ -143,13 +153,13 @@ ul > li {
 }
 
 #instructor li {
-  margin-left: 0.683em;
+  margin-left: 0.64em;
   margin-bottom: 0;
 }
 
 /* Module: Calendar */
 #calendar {
-  .button { margin-right: 0.683em; margin-top: $lineheight * .7; }
+  .button { margin-right: 0.64em; margin-top: $lineheight * .7; }
   .content, h4 {
     padding: 0;
   }
@@ -159,7 +169,7 @@ ul > li {
   h3,
   .agenda,
   .assigned {
-    padding: $lineheight/2 0.683em;
+    padding: $lineheight/2 0;
     margin-bottom: $lineheight/2;
   }
   h3 {
@@ -182,6 +192,8 @@ ul > li {
 }
 
 #current-week .assigned {
+  padding: $lineheight/2 0.64em;
+  margin: 0 -0.64em $lineheight -0.64em;
   background: transparentize($acctcolor, .8);
 }
 
@@ -195,7 +207,7 @@ ul > li {
 
   }
 
-  .is-next, .extended { display: none; }
+  .extended { display: none; }
   .content.is-visible {
     .is-next, .extended { display: block; }
   }

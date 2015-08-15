@@ -1052,7 +1052,7 @@
           futureWeeks[1].addClass('preview is-next').removeClass('extended');
           weekDate = $('.is-next h3 small').html().split(" ");
           dueDate = weekDate[2] + " " + weekDate[3];
-          $('#current-week .assigned h4').html('Assigned Work <small>(Due ' + dueDate + ' by 12:00pm CT)</small>');
+          $('#current-week .assigned h4').html('Assigned Work <small>Due ' + dueDate + ' by 12:00pm CT</small>');
         }
 
         $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week"><span>Show all</span> calendar weeks</a>');

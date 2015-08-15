@@ -63,7 +63,6 @@ a {
     text-decoration: underline;
   }
   &:active {
-    text-decoration: underline;
   }
 }
 h1 {
@@ -178,11 +177,24 @@ ul > li {
     padding: $lineheight/2 0;
     margin-bottom: $lineheight/2;
   }
-  h3 {
+  .agenda {
     margin-bottom: 0;
   }
+  h3 {
+    margin-bottom: 0;
+    small {
+      display: block;
+    }
+  }
   h4 {
-    font-weight: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    small {
+      font-weight: normal;
+      font-size: 1em;
+      text-transform: none;
+    }
   }
   .agenda {
     padding-top: 0;
@@ -192,7 +204,11 @@ ul > li {
   }
   .assigned {
     dt {
+      font-weight: bold;
       margin-top: $lineheight/2;
+    }
+    dt:after {
+      content: ":";
     }
   }
 }
@@ -238,6 +254,7 @@ ul > li {
   #header,#footer {
     width: 50%;
   }
+  #calendar h3 small { display: inline; }
   .hasjs {
     header .extended { display: inherit; }
     .is-current, .is-next {

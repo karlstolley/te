@@ -244,11 +244,12 @@ ul > li {
 /* Tiny */
 
 /* Small */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 37em) {
   $fontsize: 1.2em;
   body { font-size: $fontsize; }
   #page {
     padding: 10%;
+    max-width: 46em;
   }
   #header,#footer {
     width: 50%;

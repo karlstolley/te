@@ -224,12 +224,13 @@ ul > li {
 /* === Media Queries === */
 /* Tiny */
 /* Small */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 37em) {
   body {
     font-size: 1.2em; }
 
   #page {
-    padding: 10%; }
+    padding: 10%;
+    max-width: 46em; }
 
   #header, #footer {
     width: 50%; }

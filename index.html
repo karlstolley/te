@@ -59,7 +59,7 @@
           </dl>
         </div>
       </li>
-      <li class="week" data-expires="1441648800">
+      <li class="week" data-expires="1441735200">
         <h3>Working with Writers, Managing Projects <small>Week of August 31</small></h3>
         <div class="agenda">
           <h4>Deliverables Due</h4>
@@ -907,6 +907,10 @@
       currentTime = new Date();
       currentTime = Math.round(currentTime.getTime() / 1000);
 
+      namedDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday', 'Saturday'];
+      namedMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+
       // Highlight the current and next wek
       var futureWeeks = []
 
@@ -936,8 +940,8 @@
         if (futureWeeks[1]!=undefined) {
           futureWeeks[1].addClass('preview is-next').removeClass('extended');
           weekDate = $('.is-next h3 small').html().split(" ");
-          dueDate = weekDate[2] + " " + weekDate[3];
-          $('#current-week .assigned h4').html('Assigned Work <small>Due ' + dueDate + ' by 12:00pm CT</small>');
+          var dueDate = new Date(futureWeeks[0].attr('data-expires')*1000)
+          $('#current-week .assigned h4').html('Assigned Work <small>Due ' + namedDays[dueDate.getDay()] + ' ' + namedMonths[dueDate.getMonth()] + ' ' + dueDate.getDate() + ' by 12:00pm CT</small>');
         }
 
         $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#current-week"><span>Show all</span> calendar weeks</a>');

@@ -1048,6 +1048,8 @@
 
         futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
 
+        $('#current-week .agenda h4').html('Overdue Deliverables');
+
         if (futureWeeks[1]!=undefined) {
           futureWeeks[1].addClass('preview is-next').removeClass('extended');
           weekDate = $('.is-next h3 small').html().split(" ");

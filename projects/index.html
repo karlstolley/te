@@ -27,32 +27,55 @@
 <main id="content">
   <section class="primary">
     <h2 class="label">Projects</h2>
-    <article>
-      <h3 id="project-one">Project One: Alpha App <small>Due Wednesday, September 28, 11:59pm CT</small></h3>
+    <article class="preview">
+      <h3 id="project-one">Project One: Basic Marking and Copyediting <small>Due Wednesday, February 15, 11:59pm CT</small></h3>
       <section class="description">
         <h4>Project Description</h4>
         <p>
-          For the first project, you will independently conceive, sketch, and build the alpha
-          version of a Rails app. The app can be anything you believe to be interesting and
-          useful. It should have only the most basic functionality and design to be viable; its
-          purpose is largely to help you learn to work with Rails and make mistakes. Think of it as
-          a proof of concept, both for the app itself, and for your own initial skills in Rails
-          development. However, note that for the remaining projects in the class, teams of two
-          to three students will develop one of the team members’ app further.
-        </p>
+          For your first project, you will choose a Wikipedia article identified
+          during
+          <a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_November_2016">November 2016</a> or
+          <a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_December_2016">December 2016</a>
+          as needing copyediting. You may choose any article to copyedit, provided that it:
+      </p>
+      <ul>
+        <li>
+          provides coverage of a non-technical topic. For example, the entry for Tavis Smiley would
+          be a non-technical example, versus the entry for CoffeeScript.
+        </li>
+        <li>
+          is at least 1500 words, not including references. Copy and paste the main text into a
+          word processor to get a rough word count.
+        </li>
+        <li>
+          is primarily made up of paragraph-like text, meaning that the article is not a list,
+          timeline, or other short-form text.
+        </li>
+      </ul>
+      <p>
+        You will create a PDF of the copy, and mark it using the basic editorial symbols covered in
+        Chapter 2 of <i>The Copyeditor’s Handbook</i> (33-35).
+      </p>
       </section>
       <section class="goals">
         <h4>Project Goals</h4>
         <ul>
           <li>
-            Learn to conceive and sketch the most basic features for a web application
+            Learn to create markable copy from web pages.
           </li>
           <li>
-            Learn to setup and build a web application with Ruby on Rails
+            Learn to edit non-technical copy with a general audience in mind.
           </li>
           <li>
-            Learn to search, navigate, and consult the Rails documentation and Rails Guides to
-            solve your own problems
+            Mark copy using traditional editorial symbols outlined in <i>The Copyeditor’s
+            Handbook.</i>
+          </li>
+          <li>
+            Follow the guidance of an in-house style manual. In this case, <a href="http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style">Wikipedia's Manual of Style</a>.
+          </li>
+          <li>
+            Create a style sheet that governs internal consistency within the article you are
+            marking.
           </li>
         </ul>
       </section>
@@ -60,86 +83,85 @@
         <h4>Deliverables &amp; Milestones</h4>
         <ol>
           <li>
-            A functional Rails app that can be racked up and run locally
+            An email to the instructor containing the initial deliverables (by Friday, January 20).
+            No two students may mark the same article, so do this as soon as possible:
+            <ul>
+              <li>The URL to your chosen Wikipedia article marked as needing copyedits as of <a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_November_2016">November 2016</a> or
+          <a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_December_2016">December 2016</a></li>
+              <li>The Dropbox share link link to your copyediting-friendly PDF</li>
+            </ul>
           </li>
           <li>
-            The GitHub repository for the app (link will be emailed to the instructor)
-          </li>
-          <li>An email to the instructor containing the projects two final deliverables (by September 28, 11:59pm CT):
-            <ol>
+            An email to the instructor containing the project’s final deliverables (by Wednesday,
+            February 15, 11:59pm CT):
+            <ul>
+              <li>
+                A Dropbox share link pointing to the PDF of your scanned, marked copy
+              </li>
+              <li>
+                A Dropbox or Google Docs link to your style sheet derived from problems and
+                inconsistencies in the article
+              </li>
               <li>
                 A 4-5 sentence self-critique memo of your project and your progress in class to this
-                point
+                point.
               </li>
-              <li>
-                The https:// link to your project’s GitHub repository
-              </li>
-            </ol>
+            </ull>
           </li>
         </ol>
       </section>
       <section class="requirements">
        <h4>Requirements</h4>
         <ul>
-          <li>
-            Use Ruby 2.3.x and Rails 5.x
+          <li>Your chosen article must:
+            <ul>
+              <li>cover a non-technical topic</li>
+              <li>have running copy of approximately 1500-2000 words</li>
+              <li>be primarily paragraph-length content.</li>
+            </ul>
           </li>
-          <li>
-            Strive for at least two database tables, <a href="http://guides.rubyonrails.org/association_basics.html">associated in some way</a>
-          </li>
-          <li>
-            Develop a suite of functional and unit tests for your application
-          </li>
-          <li>
-            Frequent, detailed commits to your Git repository (include commands you may have run,
-            e.g., rails generate, in commit messages, when applicable) and frequent pushes to your
-            GitHub remote repository; Git repository must contain <b>only</b> the files and commits
-            from this project
-          </li>
-          <li>
-            Do development work on a <code>dev</code> branch in Git; merge only the best,
-            functional, test-passing work over to the <code>master</code> branch.
-          </li>
-          <li>
-            Create templates using HAML that leverage partials and a sensible source order
-          </li>
-          <li>
-            Create a mobile-first, responsive web design utilizing em- and percentage-based units,
-            <code>min-width</code> media queries, and SASS
+          <li>Your marked article copy must be:
+            <ul>
+              <li>
+                Prepared in PDF format. One way to do this is to intall a readability or
+                print-friendly addon/extension for your web browser. Create the PDF based on the
+                output from your readability add-on of choice. Although Wikipedia provides the
+                ability to download PDFs of their articles, you should learn to create
+                copyediting-friendly PDFs from any website, using your own tools. We will have a
+                Basecamp thread to discuss possible browsers and add-ons.
+              </li>
+              <li>
+                Printed and marked with a pen or pencil and scanned, or marked digitally with
+                drawing tools that allow you to create the marks described in <i>The Copyeditor’s
+                Handbook</i>
+              </li>
+              <li>
+                Marked according to the <a href="http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style">Wikipedia Manual of Style</a>
+              </li>
+              <li>
+                Submitted to the instructor in final, marked form as a Dropbox link to your PDF.
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
     </article>
-    <article class="preview">
-      <h3 id="project-two">Project Two: Beta App <small>Due Friday, November 18, 11:59pm CT</small></h3>
+    <article>
+      <h3 id="project-two">Project Two: Copyediting Technical Material <small>Due Wednesday, March 22, 11:59pm CT</small></h3>
       <section class="description">
         <h4>Project Description</h4>
         <p>
-          For the beta app, you will work in groups of two or three. Your group can either begin
-          again with the app created by one of your group’s members for Project One, or
-          rework/abandon an idea for a brand-new app. Requirements and deliverables are similar
-          to those of Project One; however, you will more fully flesh out the design of your app,
-          both functionally and visually. It must include a way to authenticate users, preferably
-          using an OAuth-based schema.
+          For this project, the instructor will assign you an open-source software project’s
+          web-based technical manual and project website, both of which you will edit for content
+          and basic formatting. You will also create a short in-house style guide for the software
+          project’s manual and promotional website.
         </p>
       </section>
+<!--
       <section class="goals">
         <h4>Project Goals</h4>
         <ul>
           <li>
-            Learn to develop and refine the basic features for a web application
-          </li>
-          <li>
-            Learn to setup and build a web application in collaboration with others, using Ruby on
-            Rails
-          </li>
-          <li>
-            Learn to search, navigate, and consult the Rails documentation and Rails Guides to
-            solve your own problems
-          </li>
-          <li>
-            Learn to authenticate users using OAuth or another mechanism that does not involve
-            storing user passwords in your app
           </li>
         </ul>
       </section>
@@ -147,17 +169,8 @@
         <h4>Deliverables &amp; Milestones</h4>
         <ol>
           <li>
-            A functional Rails app that can be racked up and run locally
-          </li>
-          <li>
-            The primary GitHub repository for the app (link should be emailed to the instructor)
-          </li>
-          <li>
-            Your personal GitHub repository for the app (link should be emailed to the instructor)
-          </li>
-          <li>
-            An email to the instructor containing the projects two final deliverables (by November
-            18, 11:59pm CT):
+            An email to the instructor containing the projects two final deliverables (by March
+            22, 11:59pm CT):
             <ol>
               <li>
                 A 5-7 sentence self-critique memo of your project and your progress in class to this
@@ -166,10 +179,6 @@
               <li>
                 A 4-5 sentence critique for each of your group members
               </li>
-              <li>
-                The https:// link to your project’s primary GitHub repository, plus the link to
-                your own fork
-              </li>
             </ol>
           </li>
         </ol>
@@ -178,83 +187,45 @@
        <h4>Requirements</h4>
         <ul>
           <li>
-            Use Ruby 2.3.x and Rails 5.x
-          </li>
-          <li>
-            Strive for at least two database tables, <a href="http://guides.rubyonrails.org/association_basics.html">associated in some way</a>
-          </li>
-          <li>
-            Develop a suite of functional and unit tests for your application
-          </li>
-          <li>
-            Frequent, detailed commits to your Git repository (include commands you may have run,
-            e.g., rails generate, in commit messages, when applicable) and frequent pushes to your
-            GitHub remote repository; Git repository must contain <b>only</b> the files and commits
-            from this project
-          </li>
-          <li>
-            Do development work on a <code>dev</code> branch in Git; merge only the best,
-            functional, test-passing work over to the <code>master</code> branch.
-          </li>
-          <li>
-            Use pull requests or some other mechanism for staying on top of the changes you make
-            to your Rails project collaboratively
-          </li>
-          <li>
-            Create templates using HAML that leverage partials and a sensible source order
-          </li>
-          <li>
-            Create a mobile-first, responsive web design utilizing em- and percentage-based units,
-            <code>min-width</code> media queries, and SASS
-          </li>
-          <li>
-            Build a mechanism for logging in and tracking user accounts, preferably OAuth, and work
-            with session variables in Rails to maintain state for the duration of a user session
-            with your app
           </li>
         </ul>
       </section>
+-->
     </article>
     <article>
-      <h3 id="project-three">Project Three: Revised, Publicly Deployed App <small>Due Wednesday, December 7, 11:59pm CT</small></h3>
+      <h3 id="project-three">Project Three: Editing for Academic Publication <small>Due Wednesday, May 3, 11:59pm CT</small></h3>
       <section class="description">
         <h4>Project Description</h4>
         <p>
-          For this project, you and your group will revise, refactor, and otherwise improve the app
-          as delivered in beta form for Project Two. Additionally, you and your group will set up
-          and automate deployment of your app to a public-facing server. You can use a system like
-          Heroku, or a custom solution employing Capistrano.
+          You will edit a pre-publication academic manuscript for Project Three, including
+          formatting its citations and reference list according to the <i>Chicago Manual of
+          Style</i>. While you will of course be working on sentence-level edits, keep in mind also
+          issues of style, clarity, and the consistency and overall organization of the manuscript.
+          Query the author frequently; academics are a special breed when it comes to feeling
+          protective of their writing.
         </p>
       </section>
-      <!--
+<!--
       <section class="goals">
         <h4>Project Goals</h4>
         <ul>
-          <li></li>
+          <li>
+          </li>
         </ul>
       </section>
       <section class="deliverables">
         <h4>Deliverables &amp; Milestones</h4>
         <ol>
           <li>
-            A video presentation of your work in progress, hosted on YouTube, Vimeo, or another
-            similar service and posted to Basecamp. Your Basecamp post should include a world-viewable URL of your
-            project, plus the URL to your GitHub repository. Include in the text of your post one or
-            two things you would like feedback on from the instructor and other students in the
-            class (due no later than September 7).
-          </li>
-          <li>
-            Substantive comments critiquing at least three other student projects. (by September 14,
-            11:59pm CT)
-          </li>
-          <li>An email to the instructor containing the projects two final deliverables (by September 21, 11:59pm CT):
+            An email to the instructor containing the projects two final deliverables (by March
+            22, 11:59pm CT):
             <ol>
               <li>
-                A 4-5 sentence self-critique memo of your project and your progress in class to this
+                A 5-7 sentence self-critique memo of your project and your progress in class to this
                 point
               </li>
               <li>
-                The https:// link to your project’s GitHub repository
+                A 4-5 sentence critique for each of your group members
               </li>
             </ol>
           </li>
@@ -263,61 +234,42 @@
       <section class="requirements">
        <h4>Requirements</h4>
         <ul>
-          <li>Valid, well-formed HTML5 and CSS</li>
-          <li>One single HTML file, and one single CSS file</li>
-          <li>JavaScript that is loaded unobtrusively (no JavaScript event attributes in your HTML, in other words) and throws no errors</li>
-          <li>HTML-based fallbacks for any media elements (image, audio, video) that you include</li>
           <li>
-            Organized, readable source that is hand-written and original (no WYSIWYGs or
-            code-generators, no Bootstrap or other off-the-shelf frameworks)
           </li>
-          <li>
-            A Git repository with frequent commits and meaningful commit messages that accurately
-            reflect each set of changes that you make
-          </li>
-          <li>GitHub repository must contain <b>only</b> the files and commits from this project</li>
         </ul>
       </section>
-      -->
+-->
     </article>
     <article>
-      <h3 id="project-four"><small>COM 531 Students Only</small> Project Four: Independent App <small>Due Wednesday, December 7, 11:59pm CT</small></h3>
+      <h3 id="project-four"><small>COM 529 Students Only</small> Project Four: TBD <small>Due Wednesday, May 3, 11:59pm CT</small></h3>
       <section class="description">
         <h4>Project Description</h4>
         <p>
-          You will create an app independently that addresses some kind of personal or professional
-          interest, and that helps to expand and deepen your knowledge of Rails.
+          Graduate students will work with the instructor to determine a project that presents
+          additional editing challenges and relates in some way to the publishing industry.
         </p>
       </section>
-      <!--
+<!--
       <section class="goals">
         <h4>Project Goals</h4>
         <ul>
-          <li></li>
+          <li>
+          </li>
         </ul>
       </section>
       <section class="deliverables">
         <h4>Deliverables &amp; Milestones</h4>
         <ol>
           <li>
-            A video presentation of your work in progress, hosted on YouTube, Vimeo, or another
-            similar service and posted to Basecamp. Your Basecamp post should include a world-viewable URL of your
-            project, plus the URL to your GitHub repository. Include in the text of your post one or
-            two things you would like feedback on from the instructor and other students in the
-            class (due no later than September 7).
-          </li>
-          <li>
-            Substantive comments critiquing at least three other student projects. (by September 14,
-            11:59pm CT)
-          </li>
-          <li>An email to the instructor containing the projects two final deliverables (by September 21, 11:59pm CT):
+            An email to the instructor containing the projects two final deliverables (by March
+            22, 11:59pm CT):
             <ol>
               <li>
-                A 4-5 sentence self-critique memo of your project and your progress in class to this
+                A 5-7 sentence self-critique memo of your project and your progress in class to this
                 point
               </li>
               <li>
-                The https:// link to your project’s GitHub repository
+                A 4-5 sentence critique for each of your group members
               </li>
             </ol>
           </li>
@@ -326,22 +278,11 @@
       <section class="requirements">
        <h4>Requirements</h4>
         <ul>
-          <li>Valid, well-formed HTML5 and CSS</li>
-          <li>One single HTML file, and one single CSS file</li>
-          <li>JavaScript that is loaded unobtrusively (no JavaScript event attributes in your HTML, in other words) and throws no errors</li>
-          <li>HTML-based fallbacks for any media elements (image, audio, video) that you include</li>
           <li>
-            Organized, readable source that is hand-written and original (no WYSIWYGs or
-            code-generators, no Bootstrap or other off-the-shelf frameworks)
           </li>
-          <li>
-            A Git repository with frequent commits and meaningful commit messages that accurately
-            reflect each set of changes that you make
-          </li>
-          <li>GitHub repository must contain <b>only</b> the files and commits from this project</li>
         </ul>
       </section>
-      -->
+-->
     </article>
   </section>
 </main>

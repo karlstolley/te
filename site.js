@@ -59,7 +59,7 @@
     if (futureWeeks[1]!==undefined) {
       futureWeeks[1].addClass('preview is-next').removeClass('extended');
       var dueDate = new Date(futureWeeks[0].attr('data-expires'));
-      $('#current-week .assigned h3').html('Assigned Work <small>Due ' + namedDays[dueDate.getDay()] + ' ' + namedMonths[dueDate.getMonth()] + ' ' + dueDate.getDate() +'</small>');
+      $('#current-week .assigned h3').html('Assigned Work; See Basecamp for Deadlines');
     }
 
     // Watch for hashes pointing to #current-week or #week-XX

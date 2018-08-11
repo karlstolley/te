@@ -46,8 +46,9 @@
       <li>Sorry, no pages are cached.</li>
     </ul>
     <script>
-      caches.open('pages')
-      .then(pagesCache => {
+      const detected_scope = '/'+location.href.split('/')[3]+'/';
+      caches.open('pages-' + detected_scope)
+        .then(pagesCache => {
         pagesCache.keys()
         .then(keys => {
           let markup = '';

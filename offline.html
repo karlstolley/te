@@ -31,10 +31,44 @@
 <main id="content">
   <article class="primary">
     <header>
-      <h2>Site Offline</h2>
+      <h2>Course Site Offline</h2>
     </header>
 
-    <p>Add list of available pages here.</p>
+    <p>
+      Something is currently wonky with your Internet connection, or possibly the course site
+      itself. Sorry about that.
+    </p>
+    <p>
+      Your browser has cached versions of the following pages, which you can view while offline.
+      Note that the calendar in particular may have changed:
+    </p>
+    <ul id="cached_pages">
+      <li>Sorry, no pages are cached.</li>
+    </ul>
+    <script>
+      caches.open('pages')
+      .then(pagesCache => {
+        pagesCache.keys()
+        .then(keys => {
+          let markup = '';
+          keys.forEach( request => {
+            let request_url = request.url;
+            // Remove the fragment identifier and the course prefix
+            let slug = request_url.split('#')[0].split('/')[4];
+            if (slug.length === 0) {
+              slug = "calendar";
+            }
+            // Capitalize the first letter of the slug
+            let page_title = slug.charAt(0).toUpperCase() + slug.substr(1);
+            // Exclude the offline page itself from the list
+            if(!page_title.includes('Offline')) {
+              markup += `<li><a href="${request_url}">${page_title}</a></li>`;
+            }
+          });
+          document.getElementById('cached_pages').innerHTML = markup;
+        });
+      });
+    </script>
 
   </article>
 </main>

@@ -1,6 +1,6 @@
 ---
-theme: Theme for Week Eleven
-meetings: 
+theme: Quotations and Dialog
+meetings:
   - agenda:
       -
     video:

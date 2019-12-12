@@ -1,6 +1,6 @@
 ---
-theme: Theme for Week One
-meetings: 
+theme: Copyeditors and Readers & Writers
+meetings:
   - agenda:
       -
     video:

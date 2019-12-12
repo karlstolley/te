@@ -1,6 +1,6 @@
 ---
-theme: Theme for Week Five
-meetings: 
+theme: Numbers and Numerals; Abbreviations
+meetings:
   - agenda:
       -
     video:

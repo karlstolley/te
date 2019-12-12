@@ -12,4 +12,5 @@ readings:
 tasks:
   - "Editing Exercise #2 discussion"
   - "Editing Exercise #3 (electronic marking)"
+  - Participate in the Week Four Reading Discussion thread on Basecamp 
 ---

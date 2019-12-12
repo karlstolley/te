@@ -11,5 +11,5 @@ readings:
 tasks:
   - "Editing Exercise #1 discussion"
   - "Editing Exercise #2 (traditional *and* electronic marking)"
-  - Participate in Week Three Reading Discussion thread on Basecamp
+  - Participate in the Week Three Reading Discussion thread on Basecamp
 ---

@@ -1,5 +1,5 @@
 ---
-theme:  Grammar II: Verbs, Adverbs, Prepositions; Conjunctions
+theme:  "Grammar II: Verbs, Adverbs, Prepositions; Conjunctions"
 meetings:
   - agenda:
       -

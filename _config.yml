@@ -8,10 +8,10 @@ course:
   title: Technical Editing
   uid: te
   tagline: >
-    Write a course tagline in `_config.yml`
-  term: 2020
+    Online course covering theory and principles of editing through intensive applied practice.
+  term: Spring 2020
   # Set `days: ""` (empty string) for weekly/asynchronous classes
-  days: ""    
+  days: ""
   license:
     name: Creative Commons
     url: https://creativecommons.org/licenses/by/4.0/

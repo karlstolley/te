@@ -42,7 +42,8 @@ deliverables:
         The Google Drive share link to your style sheet derived from problems and inconsistencies in
         the article.
       - >
-        A 4-5 sentence self-critique memo, written in the body of the email itself, discussing your project and your progress in class to this point
+        A 4-5 sentence self-critique memo, written in the body of the email itself, discussing your
+        project and your progress in class to this point
     deadline: *deadline
 ---
 

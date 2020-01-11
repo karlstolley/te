@@ -2,7 +2,7 @@
 title: Books
 ---
 
-<h4>Required</h4>
+<h3>Required</h3>
 -  Einsohn, Amy and Marilyn Schwartz. <cite>The Copyeditor’s Handbook: A Guide for Book Publishing
    and Corporate Communications</cite>. 3rd ed. Berkely, CA: University of California Press, 2011.
    ($35)
@@ -12,7 +12,7 @@ title: Books
   University of Chicago Press, 2017. ($39 for a one-year subscription to The Chicago Manual of Style
   Online; or $70 in print)
 
-<h4>Recommended</h4>
+<h3>Recommended</h3>
 - Garner, Bryan A. <cite>Garner’s Modern English Usage</cite>. 4th ed. Oxford: Oxford University
   Press, 2016. ($50) Also available as an app on iOS or Android ($25)
 

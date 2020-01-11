@@ -1,5 +1,6 @@
 ---
 title: Copyediting for Academic Publication
+preview: true
 due_date: &deadline 2020-05-07
 goals:
   - >

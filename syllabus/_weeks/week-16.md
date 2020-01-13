@@ -4,8 +4,6 @@ meetings:
   - agenda:
       - Final project questions
     video:
-readings:
-  -
 tasks:
-  -
+  - TBD
 ---

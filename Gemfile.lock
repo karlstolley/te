@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/karlstolley/jekyll-theme-open-course.git
-  revision: 0be4e94490feb0f5d03d6d520f58324119c78e7d
+  revision: 98f21185475119e05fa844e3ff0d824a9b2cec64
   specs:
     jekyll-theme-open-course (1.0.0)
       jekyll (~> 4.0)
@@ -19,7 +19,7 @@ GEM
     ffi (1.11.3)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.1)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jekyll (4.0.0)
       addressable (~> 2.4)

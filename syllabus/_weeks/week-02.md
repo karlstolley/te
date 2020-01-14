@@ -12,5 +12,5 @@ readings:
   - "CMS, Ch. 2: 2.90–2.99"
 tasks:
   - "Editing Exercise #1 (traditional marking)"
-  - Participate in the Week Two Reading Discussion thread on Basecamp
+  - Participate in Week One/Two reading discussion on Basecamp
 ---

@@ -17,5 +17,5 @@ tasks:
   - >
     Introduce yourself to the rest of the class by commenting on the Virtual Introductions message
     thread on Basecamp
-  - Participate in the Week One Reading Discussion thread on Basecamp 
+  - Participate in Week One/Two reading discussion on Basecamp
 ---

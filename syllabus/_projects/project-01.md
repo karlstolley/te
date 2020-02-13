@@ -1,6 +1,6 @@
 ---
 title: Basic Marking and Copyediting
-due_date: &deadline 2020-02-13
+due_date: &deadline 2020-02-16
 goals:
   - Learn to create markable copy from web pages.
   - Learn to edit copy with a non-specialist audience in mind.

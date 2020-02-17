@@ -42,7 +42,7 @@ deliverables:
     deadline: *deadline
 ---
 
-Self-selected groups of two or three students will be assigned an open-source software project’s
+Self-selected groups of three or four students will be assigned an open-source software project’s
 web-based technical manual and project website, both of which must be edited for content and basic
 formatting. Each group will also create a short in-house style guide for the software project’s
 manual and website.

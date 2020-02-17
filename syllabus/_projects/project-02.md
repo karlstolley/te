@@ -1,6 +1,5 @@
 ---
 title: Copyediting Technical Material
-preview: true
 due_date: &deadline 2020-03-26
 goals:
   - Learn to collaboratively edit and manage a small project in a team setting
@@ -16,11 +15,11 @@ goals:
     writing within an organization
 deliverables:
   -
-    action: An email to the instructor listing your team members (groups of 2–3 students).
+    action: An email to the instructor listing your team members (groups of 3–4 students).
     description: >
       The instructor will assign your group an open-source software project. Use Basecamp to
       organize yourselves into teams.
-    deadline: 2020-02-20
+    deadline: 2020-02-24
   -
     action: An email to the instructor containing the project’s final deliverables.
     description: >
@@ -32,8 +31,8 @@ deliverables:
         A content audit of all of a project’s technical manual pages, and its accompanying website.
         Present this as a spreadsheet that lists URLs, page titles, and a one-sentence content
         summary.
-      - Six edited pages, or roughly 3000 words total, of a project’s technical manual
-      - Three edited pages, or roughly 1500 words total, of a project’s website
+      - Approximately 2500 edited words of a project’s technical manual
+      - Approximately 1500 edited words of a project’s website
       - >
         An in-house style guide for the software project. The manual should cover language usage and
         style, as well as styles for headings, source code examples, etc. Use your project-wide

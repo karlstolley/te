@@ -1,6 +1,6 @@
 ---
 title: Copyediting Technical Material
-due_date: &deadline 2020-03-26
+due_date: &deadline 2020-03-29
 goals:
   - Learn to collaboratively edit and manage a small project in a team setting
   - >
@@ -25,7 +25,8 @@ deliverables:
     description: >
       Include Google Drive share links to all of the following deliverables, or better yet, a single
       Google Drive share link pointing to an organized folder containing all of the deliverables.
-      The required memos can be written right in the body of your email, however:
+      The required memos can be written right in the body of your email, however be sure to include
+      links to:
     details:
       - >
         A content audit of all of a project’s technical manual pages, and its accompanying website.

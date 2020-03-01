@@ -21,6 +21,23 @@ deliverables:
       organize yourselves into teams.
     deadline: 2020-02-24
   -
+    action: A Basecamp post on a thread that you and your team create containing your draft project.
+    description: >
+      The post should include specific questions you'd like feedback on from the instructor. Be sure
+      to provide in the body of your post share links that point to:
+    details:
+      - >
+        A content audit of all of a project’s technical manual pages, and its accompanying website.
+        Present this as a spreadsheet that lists URLs, page titles, and a one-sentence content
+        summary.
+      - Approximately 2500 edited words of a project’s technical manual
+      - Approximately 1500 edited words of a project’s website
+      - >
+        An in-house style guide for the software project. The manual should cover language usage and
+        style, as well as styles for headings, source code examples, etc. Use your project-wide
+        stylesheet as your first draft of the style guide.
+    deadline: 2020-03-22
+  -
     action: An email to the instructor containing the project’s final deliverables.
     description: >
       Include Google Drive share links to all of the following deliverables, or better yet, a single

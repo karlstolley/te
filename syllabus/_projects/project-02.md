@@ -36,7 +36,7 @@ deliverables:
         An in-house style guide for the software project. The manual should cover language usage and
         style, as well as styles for headings, source code examples, etc. Use your project-wide
         stylesheet as your first draft of the style guide.
-    deadline: 2020-03-22
+    deadline: 2020-03-23
   -
     action: An email to the instructor containing the project’s final deliverables.
     description: >

@@ -2,6 +2,7 @@
 theme: "Citations and References I: CMS Note Style and Bibliography"
 meetings:
   - agenda:
+      - "[Project Three](projects/#project-three) description and requirements"
       - Basic, shared components of citation styles
       - Note-style references and bibliography in CMS
     video:

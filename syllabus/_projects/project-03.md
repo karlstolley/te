@@ -1,6 +1,6 @@
 ---
 title: Copyediting for Academic Publication
-preview: true
+preview: false
 due_date: &deadline 2020-05-07
 goals:
   - >
@@ -16,10 +16,12 @@ goals:
 requirements:
   - >
     Your chosen article must have at least 4000 words of body copy, excluding any figure or image
-    captions, extended equations, or data tables.
+    captions, extended equations, or data tables. **Undergraduate students will mark the first 2000
+    words; graduate students must mark the entire article.**
   - >
     Additionally, your chosen article must contain at least 20 items in a reference list or works
-    cited page, or present at least 20 references in footnote or endnote style.
+    cited page, or present at least 20 references in footnote or endnote style (graduate students
+    must prepare the entire reference list of their chosen articles).
   - >
     Interact with the instructor and your course colleagues on Basecamp. Post frequently as you work
     through your manuscript and encounter questions and tricky problems that would be better solved
@@ -41,16 +43,24 @@ deliverables:
     description: >
       The email must include the URL to your chosen article’s download page on SSRN or Open Science
       Repository, or a Google Drive link to an IIT faculty or graduate-student's paper, if you've
-      opted to go that route.f
-    deadline: 2020-04-02
-  - action: Email the instructor with your final project deliverables.
+      opted to go that route.
+    deadline: 2020-04-06
+  -
+    action: Email the instructor with the link to your approved article as a Google Doc.
+    description: >
+      Most of the articles you will find will be presented as PDFs. You will need to rescue the copy
+      from the PDF and present it as editing-friendly copy in a Google Doc. You might wish to share
+      a link to a folder, as that will be the form of your final deliverables for this project.
+    deadline: 2020-04-13
+  -
+    action: Email the instructor with your final project deliverables.
     description: >
       Include a Google Drive share link pointing to an organized folder containing all of the final
       deliverables:
     deadline: *deadline
     details:
       - >
-        A cover letter of no more than 1-2 pages addressed to the article’s author(s) explaining the
+        A cover letter of no more than one page addressed to the article’s author(s) explaining the
         editing work that you have done. The letter should prepare the authors to understand the
         changes you have suggested, and alert them to global/repeated queries that require internal
         consistency throughout the manuscript.
@@ -60,12 +70,12 @@ deliverables:
         anyone else involved in handling the manuscript through to publication. Be organized, be
         explicit, and of course, be consistent.
       - >
-        A Google Doc of your marked-up article. In-text citation should match either the
-        bibliography, author-date, or note style. For example, if the unedited manuscript uses a
-        date-style system, use CMS author-date style.
+        A Google Doc of your marked-up article. In-text citation should match either the Chicago
+        Manual of Style’s bibliography, author-date, or note style. For example, if the unedited
+        manuscript uses a date-style system, use CMS author-date style.
       - >
         A self-critique memo of 2-3 paragraphs that evaluates your project and your progress in the
-        class to this semester. You can write this in the body of your email.
+        class this semester. You can write this in the body of your email.
 ---
 
 You will edit a pre-publication academic manuscript for Project Three, including formatting its
@@ -91,7 +101,8 @@ You will choose an in-progress article manuscript from one of the following sour
 You will find almost all of the research-repository papers are presented as PDFs. You will have to
 clean up the PDF and present it as a Google Doc for digital markup.
 
-You are responsible for editing the first 4000 words of the manuscript and the first 20 entries of
-its bibliography/reference list or the first 20 note references, depending on the citation style the
-paper uses. Refer to the <cite>Chicago Manual of Style</cite> for all matters of grammar and usage,
-as well as for citation style and formatting.
+Undergraduate students are responsible for editing the first 2000 words of the manuscript and the
+first 20 entries of its bibliography/reference list or the first 20 note references, depending on
+the citation style the paper uses. (Graduate students must edit the entire article, and prepare the
+entire reference list in an appropriate Chicago format.) Refer to the <cite>Chicago Manual of
+Style</cite> for all matters of grammar and usage, as well as for citation style and formatting.

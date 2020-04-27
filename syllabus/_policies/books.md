@@ -2,6 +2,7 @@
 title: Books
 ---
 
+<section class="required" markdown="1">
 <h3>Required</h3>
 - Einsohn, Amy and Marilyn Schwartz. <cite>The Copyeditor’s Handbook: A Guide for Book Publishing
   and Corporate Communications</cite>. 4th ed. Oakland, CA: University of California Press, 2019.
@@ -11,10 +12,13 @@ title: Books
 - University of Chicago Press. <cite>The Chicago Manual of Style</cite>. 17th ed. Chicago:
   University of Chicago Press, 2017. ($39 for a one-year subscription to The Chicago Manual of Style
   Online; or $70 in print)
+</section>
 
+<section class="recommended" markdown="1">
 <h3>Recommended</h3>
 - Garner, Bryan A. <cite>Garner’s Modern English Usage</cite>. 4th ed. Oxford: Oxford University
   Press, 2016. ($50) Also available as an app on iOS or Android ($25)
+</section>
 
 <aside class="fine-print" markdown="1">
   <b>My policy for assigning books:</b> Required Books are all required in the edition indicated;

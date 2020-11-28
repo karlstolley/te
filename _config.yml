@@ -1,5 +1,5 @@
 url: https://courses.stolley.co
-baseurl: /te/
+baseurl: /te-2020/
 
 timezone: America/Chicago
 
@@ -10,6 +10,7 @@ course:
   tagline: >
     Online course covering theory and principles of editing through intensive applied practice.
   term: Spring 2020
+  archive: https://github.com/karlstolley/te/tree/s-2020
   # Set `days: ""` (empty string) for weekly/asynchronous classes
   days: ""
   license:

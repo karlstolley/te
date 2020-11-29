@@ -1,6 +1,6 @@
 ---
-theme: Spring Break
+theme: Catch-up and Review
 meetings:
   - agenda:
-      - No class
+      - Q&A over material covered so far
 ---

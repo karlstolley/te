@@ -12,7 +12,7 @@ readings:
 tasks:
   - >
     Submit COM 425/529 Contract and Survey (link in your @hawk.iit.edu inbox; email instructor at
-    karl.stolley@gmail.com if you did not receive it)
+    kstolley@iit.edu if you did not receive it)
   - Create Basecamp account (invite will arrive after you submit the Contract and Survey)
   - >
     Introduce yourself to the rest of the class by commenting on the Virtual Introductions message

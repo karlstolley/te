@@ -1,6 +1,6 @@
 ---
 title: Basic Marking and Copyediting
-due_date: &deadline 2020-02-16
+due_date: &deadline 2021-02-25
 goals:
   - Learn to create markable copy from web pages.
   - Learn to edit copy with a non-specialist audience in mind.
@@ -32,7 +32,7 @@ deliverables:
     details:
       - The URL to your chosen Wikipedia article marked as needing copyedits.
       - The Google Drive share link to your copyediting-ready but unmarked Google Doc.
-    deadline: 2020-01-23
+    deadline: 2021-02-04
   -
     action: An email to the instructor containing the project’s final deliverables.
     description: "Be sure to include:"
@@ -47,10 +47,10 @@ deliverables:
     deadline: *deadline
 ---
 
-You will choose a Wikipedia article from a list of articles identified in [November
-2019](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_November_2019)
-or [December
-2019](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_December_2019)
+You will choose a Wikipedia article from a list of articles identified in [December
+2020](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_December_2020)
+or [January
+2021](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_January_2021)
 as needing copyedits. You may choose any article to copyedit, provided that the article itself still
 includes a notice that it may require copyediting. The article you choose must be paragraph-like
 narrative text, meaning that the article should not be a list, timeline, or other short-form text.

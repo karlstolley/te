@@ -1,6 +1,7 @@
 ---
 title: Copyediting Technical Material
-due_date: &deadline 2020-04-02
+due_date: &deadline 2021-04-08
+preview: true
 goals:
   - Learn to collaboratively edit and manage a small project in a team setting
   - >
@@ -19,7 +20,7 @@ deliverables:
     description: >
       The instructor will assign your group an open-source software project. Use Basecamp to
       organize yourselves into teams.
-    deadline: 2020-02-24
+    deadline: 2021-03-01
   -
     action: A Basecamp post on a thread that you and your team create containing your draft project.
     description: >
@@ -36,7 +37,7 @@ deliverables:
         An in-house style guide for the software project. The manual should cover language usage and
         style, as well as styles for headings, source code examples, etc. Use your project-wide
         stylesheet as your first draft of the style guide.
-    deadline: 2020-03-23
+    deadline: 2021-03-25
   -
     action: An email to the instructor containing the project’s final deliverables.
     description: >

@@ -1,7 +1,7 @@
 ---
 title: Copyediting for Academic Publication
-preview: false
-due_date: &deadline 2020-05-07
+preview: true
+due_date: &deadline 2021-05-13
 goals:
   - >
     Learn to mark up copy intended for academic publication, including working with academic authors
@@ -44,14 +44,14 @@ deliverables:
       The email must include the URL to your chosen article’s download page on SSRN or Open Science
       Repository, or a Google Drive link to an IIT faculty or graduate-student's paper, if you've
       opted to go that route.
-    deadline: 2020-04-06
+    deadline: 2021-04-15
   -
     action: Email the instructor with the link to your approved article as a Google Doc.
     description: >
       Most of the articles you will find will be presented as PDFs. You will need to rescue the copy
       from the PDF and present it as editing-friendly copy in a Google Doc. You might wish to share
       a link to a folder, as that will be the form of your final deliverables for this project.
-    deadline: 2020-04-13
+    deadline: 2021-04-19
   -
     action: Email the instructor with your final project deliverables.
     description: >

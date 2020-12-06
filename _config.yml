@@ -42,6 +42,10 @@ course:
     - label: Policies
       href: "policies/" # Stock for policies, projects.
       id: pol # read this into SCSS somehow?
+  css:
+    font-url: "https://use.typekit.net/qqk1feg.css"
+    theme: winter
+
 collections_dir: syllabus
 
 collections:

@@ -2,7 +2,7 @@
 theme: Copyediting Basics
 meetings:
   - agenda:
-      - Project One description and requirements
+      - "[Project One](projects/#project-one) description and requirements"
       - The basic purposes and techniques of copyediting
       - Course work-submission procedures
       - Creating shareable links in Dropbox or Google Drive

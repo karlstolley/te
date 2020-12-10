@@ -84,6 +84,7 @@ course be working on sentence-level edits, keep in mind also issues of style, cl
 consistency and overall organization of the manuscript. Query the author frequently; academics are a
 special breed when it comes to feeling protective of their writing.
 
+<!--
 You will choose an in-progress article manuscript from one of the following sources:
 
 1. The [Social Sciences Research Network](https://www.ssrn.com/index.cfm/en/) (SSRN)
@@ -106,3 +107,4 @@ first 20 entries of its bibliography/reference list or the first 20 note referen
 the citation style the paper uses. (Graduate students must edit the entire article, and prepare the
 entire reference list in an appropriate Chicago format.) Refer to the <cite>Chicago Manual of
 Style</cite> for all matters of grammar and usage, as well as for citation style and formatting.
+-->

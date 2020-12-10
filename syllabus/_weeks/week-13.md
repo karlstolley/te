@@ -2,7 +2,6 @@
 theme: "Citations and References II: CMS Author-Date References"
 meetings:
   - agenda:
-      - Project Three description and requirements
       - CMS author-date reference style
     video:
 readings:

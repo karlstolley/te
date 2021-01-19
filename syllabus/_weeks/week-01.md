@@ -15,7 +15,7 @@ tasks:
     kstolley@iit.edu if you did not receive it)
   - Create Basecamp account (invite will arrive after you submit the Contract and Survey)
   - >
-    Introduce yourself to the rest of the class by commenting on the Virtual Introductions message
-    thread on Basecamp
+    Introduce yourself to the rest of the class by commenting on the Introduce Yourself! message
+    thread on the Social Hour Basecamp
   - Participate in Week One/Two reading discussion on Basecamp
 ---

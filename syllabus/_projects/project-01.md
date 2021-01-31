@@ -32,7 +32,7 @@ deliverables:
     details:
       - The URL to your chosen Wikipedia article marked as needing copyedits.
       - The Google Drive share link to your copyediting-ready but unmarked Google Doc.
-    deadline: 2021-02-04
+    deadline: 2021-02-08
   -
     action: An email to the instructor containing the project’s final deliverables.
     description: "Be sure to include:"

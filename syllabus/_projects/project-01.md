@@ -47,11 +47,9 @@ deliverables:
     deadline: *deadline
 ---
 
-You will choose a Wikipedia article from a list of articles identified in [December
-2020](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_December_2020)
-or [January
-2021](https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_copy_edit_from_January_2021)
-as needing copyedits. You may choose any article to copyedit, provided that the article itself still
+You will choose a Wikipedia article from
+[a list of articles identified as needing copyedits](https://en.wikipedia.org/wiki/Category:All_articles_needing_copy_edit).
+You may choose any article to copyedit, provided that the article itself still
 includes a notice that it may require copyediting. The article you choose must be paragraph-like
 narrative text, meaning that the article should not be a list, timeline, or other short-form text.
 The article should also be at least 1000 words, excluding references.

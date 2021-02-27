@@ -20,7 +20,7 @@ deliverables:
     description: >
       The instructor will assign your group an open-source software project. Use Basecamp to
       organize yourselves into teams.
-    deadline: 2021-03-01
+    deadline: 2021-03-08
   -
     action: A Basecamp post on a thread that you and your team create containing your draft project.
     description: >

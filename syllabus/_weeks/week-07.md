@@ -2,6 +2,7 @@
 theme:  "Grammar II: Verbs, Adverbs, Prepositions; Conjunctions"
 meetings:
   - agenda:
+      - "[Project Two](projects/#project-two) description and requirements"
       - "Basic grammar: verbs, adverbs, and prepositions"
       - Conjunctions, clauses, and sentence construction
     video:

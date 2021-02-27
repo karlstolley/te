@@ -2,7 +2,6 @@
 theme: "Grammar I: Nouns, Pronouns, Adjectives"
 meetings:
   - agenda:
-      - "[Project Two](projects/#project-two) description and requirements"
       - "Basic grammar: nouns, pronouns, and adjectives"
     video:
 readings:

@@ -11,6 +11,5 @@ readings:
   - CMS, Ch. 3, 12
   - SCE, Ch. 7-9
 tasks:
-  - "Editing Exercise #6 discussion"
   - Participate in the Week Nine Reading Discussion thread on Basecamp
 ---

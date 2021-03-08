@@ -1,6 +1,16 @@
 ---
-theme: Catch-up and Review
+theme: Figures and Tables; Mathematical Formulas
 meetings:
   - agenda:
-      - Q&A over material covered so far
+      - "Figures: photographs, illustrations, and other works of art"
+      - "Tables: data, charts, graphs, and other visualizations"
+      - "Representing and copyediting mathematical formulas in manuscripts"
+    video:
+readings:
+  - TCH, Ch. 10
+  - CMS, Ch. 3, 12
+  - SCE, Ch. 7-9
+tasks:
+  - "Editing Exercise #6 discussion"
+  - Participate in the Week Nine Reading Discussion thread on Basecamp
 ---

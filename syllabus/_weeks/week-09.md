@@ -1,16 +1,8 @@
 ---
-theme: Figures and Tables; Mathematical Formulas
+theme: Catch-up and Work Week
 meetings:
   - agenda:
-      - "Figures: photographs, illustrations, and other works of art"
-      - "Tables: data, charts, graphs, and other visualizations"
-      - "Representing and copyediting mathematical formulas in manuscripts"
-    video:
-readings:
-  - TCH, Ch. 10
-  - CMS, Ch. 3, 12
-  - SCE, Ch. 7-9
+      - Q&A over material covered so far
 tasks:
-  - "Editing Exercise #6 discussion"
-  - Participate in the Week Nine Reading Discussion thread on Basecamp
+  - Make some headway on Project Two
 ---

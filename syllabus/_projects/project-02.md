@@ -21,7 +21,9 @@ requirements:
   - >
     You must conduct a content audit of all of a project’s technical manual pages, and its
     accompanying website. Present this as a spreadsheet that lists URLs, page titles, and a
-    one-sentence content summary.
+    one-sentence content summary. (If your project’s manual is especially large, your audit should
+    reflect 15 pages per team member. So a three-member team will have 45 pages listed in the
+    content audit.)
   - As a team, you are responsible for editing 2500 words of a project’s technical manual
   - As a team, you are responsible for editing 1500 words of a project’s website
   - >

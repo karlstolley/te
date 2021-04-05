@@ -7,7 +7,6 @@ meetings:
 readings:
   - CMS, Ch. 15
 tasks:
-  - "Editing Exercise #7 discussion"
-  - "Editing Exercise #8"
+  - "Editing Exercise #7"
   - Participate in the Week Thirteen Reading Discussion thread on Basecamp
 ---

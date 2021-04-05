@@ -10,6 +10,5 @@ readings:
   - TCH, Ch. 11
   - CMS, Ch. 14
 tasks:
-  - "Editing Exercise #7"
   - Participate in the Week Twelve Reading Discussion thread on Basecamp
 ---

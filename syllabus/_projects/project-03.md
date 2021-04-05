@@ -1,6 +1,6 @@
 ---
 title: Copyediting for Academic Publication
-preview: true
+preview: false
 due_date: &deadline 2021-05-13
 goals:
   - >
@@ -37,21 +37,26 @@ requirements:
     Your cover letter should mention any recurring issues the author might want to pay special
     attention to. Mention also any suggestions for substantive, global revisions (major cuts,
     reorganization, etc.) if they are needed.
+  - >
+    You may complete this project either individually or with a partner. The requirements are the
+    same regardless.
 deliverables:
   -
     action: Email the instructor with your proposed article for approval.
     description: >
       The email must include the URL to your chosen article’s download page on SSRN or Open Science
       Repository, or a Google Drive link to an IIT faculty or graduate-student's paper, if you've
-      opted to go that route.
-    deadline: 2021-04-15
+      opted to go that route. In either case, include the link to your saved copy of the article in
+      your Google Drive. If you are working with a partner, include your partner on the email.
+    deadline: 2021-04-19
   -
     action: Email the instructor with the link to your approved article as a Google Doc.
     description: >
       Most of the articles you will find will be presented as PDFs. You will need to rescue the copy
       from the PDF and present it as editing-friendly copy in a Google Doc. You might wish to share
-      a link to a folder, as that will be the form of your final deliverables for this project.
-    deadline: 2021-04-19
+      a link to a folder, as that will be the form of your final deliverables for this project. If
+      you are working with a partner, include your partner on the email.
+    deadline: 2021-04-22
   -
     action: Email the instructor with your final project deliverables.
     description: >
@@ -76,6 +81,8 @@ deliverables:
       - >
         A self-critique memo of 2-3 paragraphs that evaluates your project and your progress in the
         class this semester. You can write this in the body of your email.
+      - >
+        If you are working with a partner, include a brief critique of your partner.
 ---
 
 You will edit a pre-publication academic manuscript for Project Three, including formatting its
@@ -84,7 +91,8 @@ course be working on sentence-level edits, keep in mind also issues of style, cl
 consistency and overall organization of the manuscript. Query the author frequently; academics are a
 special breed when it comes to feeling protective of their writing.
 
-<!--
+You may complete this project individually or with a partner.
+
 You will choose an in-progress article manuscript from one of the following sources:
 
 1. The [Social Sciences Research Network](https://www.ssrn.com/index.cfm/en/) (SSRN)
@@ -100,11 +108,12 @@ You will choose an in-progress article manuscript from one of the following sour
   faculty member or graduate student.
 
 You will find almost all of the research-repository papers are presented as PDFs. You will have to
-clean up the PDF and present it as a Google Doc for digital markup.
+clean up the PDF and present it as a Google Doc for digital markup. Be sure to save a copy of the
+PDF to Google Drive, and share the link to that PDF with the instructor as well as the original
+link you find on the web.
 
 Undergraduate students are responsible for editing the first 2000 words of the manuscript and the
 first 20 entries of its bibliography/reference list or the first 20 note references, depending on
 the citation style the paper uses. (Graduate students must edit the entire article, and prepare the
 entire reference list in an appropriate Chicago format.) Refer to the <cite>Chicago Manual of
 Style</cite> for all matters of grammar and usage, as well as for citation style and formatting.
--->

@@ -1,6 +1,6 @@
 ---
 title: Copyediting Technical Material
-due_date: &deadline 2021-04-08
+due_date: &deadline 2021-04-12
 preview: false
 goals:
   - Learn to collaboratively edit and manage a small project in a team setting
